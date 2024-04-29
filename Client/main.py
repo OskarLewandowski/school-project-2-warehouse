@@ -2,7 +2,6 @@ import json
 import multiprocessing
 import threading
 from time import sleep
-
 from typing import List, Optional
 from queue import Queue
 import typing
@@ -10,6 +9,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import requests
 import logging
+
 
 ##########################
 ##    Model danych
@@ -23,6 +23,7 @@ class Actions(BaseModel):
     grupaProduktów: Optional[typing.Dict[str, int]] = None
     cena: Optional[int] = None
 
+
 class Replies(BaseModel):
     id: Optional[int] = None
     typ: Optional[str] = None
@@ -32,18 +33,20 @@ class Replies(BaseModel):
     grupaProduktów: Optional[typing.Dict[str, int]] = None
     stanMagazynów: Optional[typing.Dict[str, int]] = None
     raportSprzedaży: Optional[typing.Dict[str, int]] = None
-    cenaZmieniona : Optional[bool] = None
-    zrealizowanePrzywrócenie : Optional[bool] = None
-    zrealizowaneZamowienie : Optional[bool] = None
-    zrealizowaneWycofanie : Optional[bool] = None
-    zebraneZaopatrzenie : Optional[bool] = None
+    cenaZmieniona: Optional[bool] = None
+    zrealizowanePrzywrócenie: Optional[bool] = None
+    zrealizowaneZamowienie: Optional[bool] = None
+    zrealizowaneWycofanie: Optional[bool] = None
+    zebraneZaopatrzenie: Optional[bool] = None
     studentId: Optional[int] = None
     timestamp: Optional[int] = None
+
 
 class Handshake(BaseModel):
     ip_addr: str
     port: int
-    indeks : int
+    indeks: int
+
 
 ## Uruchomienie clienta
 app = FastAPI()
@@ -57,11 +60,12 @@ CLIENT_PORT = 8889
 
 INDEKS = 448700
 
+
 ## Funkcja do przetwarzania danych, otrzymuje na wejściu kolejkę akcji do wykonania
 def function(queue: Queue):
     n_workers = 2
 
-    workers = [multiprocessing.Process(target=process, args=(queue, ))
+    workers = [multiprocessing.Process(target=process, args=(queue,))
                for i in range(n_workers)]
 
     # Przykład odpowiedzi dla pojedynczej akcji
@@ -99,10 +103,12 @@ def function(queue: Queue):
     logging.info(r)
     r.close()
 
+
 ## Metoda dla wątków do procesowania. Tylko przykład, można tworzyć różne metody dla różnych wątków, wszystkie opcje są
 ## dozwolone
 def process(queue: Queue):
     return 1
+
 
 ## Odbiera listę operacji od serwera
 @app.post("/push-data", status_code=201)
@@ -114,20 +120,21 @@ async def create_sensor_data(actions: List[Actions]):
     res.start()
     res.join()
 
+
 ## Laczy się z serwerem i przesyła mu swój numer IP i port
 @app.get("/hello")
 async def say_hello():
     url = f"http://{SERVER_IP}:{SERVER_PORT}/action/handshake"
     medata = {
-        "port" : CLIENT_PORT,
+        "port": CLIENT_PORT,
         "ip_addr": CLIENT_IP,
-        "indeks" : INDEKS
+        "indeks": INDEKS
     }
     me = Handshake(**medata)
     data = json.dumps(medata)
     headers = {'Content-type': 'application/json'}
     res = requests.post(url, data=data, headers=headers)
     if (res.status_code == 201 or res.status_code == 200):
-        return("Success")
+        return ("Success")
     else:
-        return(f"Error occurred {res.text}")
+        return (f"Error occurred {res.text}")
