@@ -3,7 +3,7 @@ import multiprocessing
 import threading
 from time import sleep
 from typing import List, Optional
-from queue import Queue
+from queue import Queue, Empty
 import typing
 from fastapi import FastAPI
 from pydantic import BaseModel
@@ -63,10 +63,15 @@ INDEKS = 448700
 
 ## Funkcja do przetwarzania danych, otrzymuje na wejściu kolejkę akcji do wykonania
 def function(queue: Queue):
-    n_workers = 2
+    n_workers = 4
 
     workers = [multiprocessing.Process(target=process, args=(queue,))
-               for i in range(n_workers)]
+               for _ in range(n_workers)]
+
+    for worker in workers:
+        worker.start()
+    for worker in workers:
+        worker.join()
 
     # Przykład odpowiedzi dla pojedynczej akcji
     odp = Replies()
@@ -107,18 +112,30 @@ def function(queue: Queue):
 ## Metoda dla wątków do procesowania. Tylko przykład, można tworzyć różne metody dla różnych wątków, wszystkie opcje są
 ## dozwolone
 def process(queue: Queue):
-    return 1
+    while True:
+        try:
+            data = queue.get(timeout=0.5)
+            print(data)
+        except Empty:
+            print("Kolejka jest pusta, kończenie pracy procesu...")
+            break
+        except Exception as e:
+            print("Błąd:", e)
 
 
 ## Odbiera listę operacji od serwera
 @app.post("/push-data", status_code=201)
 async def create_sensor_data(actions: List[Actions]):
-    queue = Queue()
-    [queue.put(i) for i in actions]
+    queue = multiprocessing.Queue()
+
+    for action in actions:
+        queue.put(action)
+
     logging.info('Processing')
-    res = threading.Thread(target=function, args=(queue,))
-    res.start()
-    res.join()
+
+    process_worker = multiprocessing.Process(target=function, args=(queue,))
+    process_worker.start()
+    process_worker.join()
 
 
 ## Laczy się z serwerem i przesyła mu swój numer IP i port
