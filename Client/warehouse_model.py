@@ -18,7 +18,75 @@ class Warehouse:
         "JAJKO": {"price": 5, "quantity": 100}
     }
 
-    _sales = {key: 0 for key in _products}
+    @classmethod
+    def ZAMKNIJ_SKLEP(cls):
+        with cls._lock:
+            final_inventory = {product: details['quantity'] for product, details in cls._products.items()}
+
+            for product in cls._products.keys():
+                cls._products[product]['price'] = 5
+                cls._products[product]['quantity'] = 100
+
+            return final_inventory
+
+    @classmethod
+    def PRZYWROCENIE(cls, product_name):
+        with cls._lock:
+            if product_name in cls._products:
+                current_quantity = cls._products[product_name]['quantity']
+                if current_quantity == -9999999:
+                    cls._products[product_name]['quantity'] = 0
+                    response = {
+                        "product": product_name,
+                        "restored": True
+                    }
+                else:
+                    response = {
+                        "product": product_name,
+                        "error": "Produkt nie był wycofany",
+                        "restored": False
+                    }
+
+            return response
+
+    @classmethod
+    def WYCOFANIE(cls, product_name):
+        with cls._lock:
+            if product_name in cls._products:
+                cls._products[product_name]['quantity'] = -9999999
+                response = {
+                    "product": product_name,
+                    "withdrawn": True
+                }
+            else:
+                response = {
+                    "error": "Produkt nie istnieje w magazynie",
+                    "withdrawn": False
+                }
+            return response
+
+    @classmethod
+    def POJEDYNCZE_ZAOPATRZENIE(cls, product_name):
+        with cls._lock:
+            if product_name in cls._products:
+                current_quantity = cls._products[product_name]['quantity']
+                if current_quantity >= 0:
+                    cls._products[product_name]['quantity'] += 1
+
+                    response = {
+                        "product": product_name,
+                        "quantity_added": 1,
+                        "new_quantity": cls._products[product_name]['quantity'],
+                        "supply_received": True
+                    }
+                else:
+                    response = {
+                        "product": product_name,
+                        "error": "Nieprawidłowy stan magazynowy",
+                        "supply_received": False
+                    }
+
+            return response
 
     @classmethod
     def POJEDYNCZE_ZAMOWIENIE(cls, product_name):
@@ -27,7 +95,6 @@ class Warehouse:
                 available_quantity = cls._products[product_name]['quantity']
                 if available_quantity >= 1:
                     cls._products[product_name]['quantity'] -= 1
-                    cls._sales[product_name] += 1
                     response = {"product": product_name, "ordered_quantity": 1, "order_fulfilled": True}
                 else:
                     response = {"product": product_name, "ordered_quantity": 1, "order_fulfilled": False}
@@ -57,6 +124,7 @@ class Warehouse:
 
                 return {"product": product_name, "price": promo_price}
 
+    # FOR TEST
     @classmethod
     def update(cls, name, price=None, quantity=None):
         with cls._lock:
@@ -78,13 +146,6 @@ class Warehouse:
             for product, details in cls._products.items():
                 print(f"Nazwa - {product}, Cena - {details['price']}, Ilość - {details['quantity']}")
 
-    @classmethod
-    def display_sales(cls):
-        with cls._lock:
-            print("Rejestr sprzedaży:")
-            for product, sold_quantity in cls._sales.items():
-                print(f"{product}: Sprzedano {sold_quantity} sztuk")
-
 
 # Testowanie
 warehouse = Warehouse
@@ -94,9 +155,23 @@ for i in range(15):
     warehouse.POJEDYNCZE_ZAMOWIENIE("CHLEB")
 
 warehouse.summary()
-warehouse.POJEDYNCZE_ZAMOWIENIE("JAJKO")
-warehouse.display_sales()
+restore_result = warehouse.PRZYWROCENIE("CHLEB")
+print(restore_result)
 
+warehouse.POJEDYNCZE_ZAMOWIENIE("JAJKO")
+withdraw_result = warehouse.WYCOFANIE("CHLEB")
+print(withdraw_result)
 warehouse.POJEDYNCZE_ZAMOWIENIE("CHLEB")
-warehouse.display_sales()
 warehouse.summary()
+restore_result = warehouse.PRZYWROCENIE("CHLEB")
+print(restore_result)
+
+supply_result = warehouse.POJEDYNCZE_ZAOPATRZENIE("CHLEB")
+print(supply_result)
+supply_result = warehouse.POJEDYNCZE_ZAOPATRZENIE("CHLEB")
+print(supply_result)
+supply_result = warehouse.POJEDYNCZE_ZAOPATRZENIE("SOK")
+print(supply_result)
+warehouse.summary()
+
+print(warehouse.ZAMKNIJ_SKLEP())
