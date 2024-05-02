@@ -111,10 +111,10 @@ def function(queue: Queue):
 
 ## Metoda dla wątków do procesowania. Tylko przykład, można tworzyć różne metody dla różnych wątków, wszystkie opcje są
 ## dozwolone
-def process(queue: Queue):
+def process(queue: multiprocessing.Queue):
     while True:
         try:
-            data = queue.get(timeout=0.5)
+            data = queue.get(timeout=0.7)
             print(data)
         except Empty:
             print("Kolejka jest pusta, kończenie pracy procesu...")
