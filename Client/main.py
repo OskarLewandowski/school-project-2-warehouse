@@ -61,11 +61,11 @@ CLIENT_PORT = 8889
 
 INDEKS = 448700
 
+response_queue = multiprocessing.Queue()
+
 
 ## Funkcja do przetwarzania danych, otrzymuje na wejściu kolejkę akcji do wykonania
-def function(queue: multiprocessing.Queue):
-    response_queue = multiprocessing.Queue()
-
+def function(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue):
     lock = multiprocessing.Lock()
 
     n_workers = 4
@@ -103,51 +103,78 @@ def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue,
     while True:
         try:
             data = queue.get(timeout=0.7)
-            answer = Replies()
-
-            answer.id = data.id
-            answer.typ = data.typ
-            answer.product = data.product
-            answer.liczba = 1
-            answer.studentId = INDEKS
 
             if data.typ == "PODAJ_CENE":
-                print(data.typ)
+                answer = Replies()
+                answer.id = data.id
+                answer.typ = data.typ
+                answer.product = data.product
+                answer.studentId = INDEKS
                 with lock:
                     result = Warehouse.PODAJ_CENE(data.product)
                     answer.cena = result
+                    print(answer)
+                    response_queue.put(answer)
 
             elif data.typ == "POJEDYNCZE_ZAMOWIENIE":
-                print(data.typ)
+                answer = Replies()
+                answer.id = data.id
+                answer.typ = data.typ
+                answer.product = data.product
+                answer.liczba = 1
+                answer.studentId = INDEKS
                 with lock:
                     result = Warehouse.POJEDYNCZE_ZAMOWIENIE(data.product)
                     answer.zrealizowaneZamowienie = result
+                    print(answer)
+                    response_queue.put(answer)
 
             elif data.typ == "POJEDYNCZE_ZAOPATRZENIE":
-                print(data.typ)
+                answer = Replies()
+                answer.id = data.id
+                answer.typ = data.typ
+                answer.product = data.product
+                answer.liczba = 1
+                answer.studentId = INDEKS
                 with lock:
                     result = Warehouse.POJEDYNCZE_ZAOPATRZENIE(data.product)
                     answer.zebraneZaopatrzenie = result
+                    print(answer)
+                    response_queue.put(answer)
             elif data.typ == "WYCOFANIE":
-                print(data.typ)
+                answer = Replies()
+                answer.id = data.id
+                answer.typ = data.typ
+                answer.product = data.product
+                answer.studentId = INDEKS
                 with lock:
                     result = Warehouse.WYCOFANIE(data.product)
                     answer.zrealizowaneWycofanie = result
+                    print(answer)
+                    response_queue.put(answer)
             elif data.typ == "PRZYWROCENIE":
-                print(data.typ)
+                answer = Replies()
+                answer.id = data.id
+                answer.typ = data.typ
+                answer.product = data.product
+                answer.studentId = INDEKS
                 with lock:
                     result = Warehouse.PRZYWROCENIE(data.product)
                     answer.zrealizowanePrzywrócenie = result
+                    print(answer)
+                    response_queue.put(answer)
             elif data.typ == "ZAMKNIJ_SKLEP":
-                print(data.typ)
+                answer = Replies()
+                answer.id = data.id
+                answer.typ = data.typ
+                answer.product = data.product
+                answer.studentId = INDEKS
                 with lock:
                     result = Warehouse.ZAMKNIJ_SKLEP()
                     answer.stanMagazynów = result
-                print(result)
+                    print(answer)
+                    response_queue.put(answer)
 
-            print(answer)
-            with lock:
-                response_queue.put(answer)
         except Empty:
             print("Kolejka jest pusta, kończenie pracy procesu...")
             break
@@ -165,7 +192,7 @@ async def create_sensor_data(actions: List[Actions]):
 
     logging.info('Processing')
 
-    process_worker = multiprocessing.Process(target=function, args=(queue,))
+    process_worker = multiprocessing.Process(target=function, args=(queue, response_queue))
     process_worker.start()
     process_worker.join()
 
