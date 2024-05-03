@@ -1,3 +1,6 @@
+from multiprocessing import Manager
+
+
 class Warehouse:
     _promo_co_10_wycen = 0
     _original_prices = {}
@@ -89,3 +92,18 @@ class Warehouse:
             del cls._original_prices[product_name]
 
         return promo_price
+
+    @classmethod
+    def init_manager(cls):
+        manager = Manager()
+        cls._promo_co_10_wycen = manager.Value('i', 0)
+        cls._original_prices = manager.dict()
+        cls._products = manager.dict({key: manager.dict(value) for key, value in cls._products.items()})
+
+
+def main():
+    Warehouse.init_manager()
+
+
+if __name__ == '__main__':
+    main()
