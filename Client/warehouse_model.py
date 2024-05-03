@@ -31,19 +31,12 @@ class Warehouse:
     def PRZYWROCENIE(cls, product_name):
         cls._products[product_name]['quantity'] = 0
         response = True
-
         return response
 
     @classmethod
     def WYCOFANIE(cls, product_name):
-        current_quantity = cls._products[product_name]['quantity']
-
-        if current_quantity != -9999999:
-            cls._products[product_name]['quantity'] = -9999999
-            response = True
-        else:
-            response = False
-
+        cls._products[product_name]['quantity'] = -9999999
+        response = True
         return response
 
     @classmethod
