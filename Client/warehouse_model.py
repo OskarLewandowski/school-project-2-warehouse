@@ -15,7 +15,7 @@ class Warehouse:
         "MIESO": {"price": 5, "quantity": 100},
         "SOK": {"price": 5, "quantity": 100},
         "MAKA": {"price": 5, "quantity": 100},
-        "JAJKO": {"price": 5, "quantity": 100}
+        "JAJKA": {"price": 5, "quantity": 100}
     }
 
     @classmethod

@@ -9,6 +9,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import requests
 import logging
+from warehouse_model import Warehouse
 
 
 ##########################
@@ -115,7 +116,28 @@ def process(queue: multiprocessing.Queue):
     while True:
         try:
             data = queue.get(timeout=0.7)
-            print(data)
+            if data.typ == "PODAJ_CENE":
+                print(data.typ)
+                result = Warehouse.PODAJ_CENE(data.product)
+            elif data.typ == "POJEDYNCZE_ZAMOWIENIE":
+                print(data.typ)
+                result = Warehouse.POJEDYNCZE_ZAMOWIENIE(data.product)
+            elif data.typ == "POJEDYNCZE_ZAOPATRZENIE":
+                print(data.typ)
+                result = Warehouse.POJEDYNCZE_ZAOPATRZENIE(data.product)
+            elif data.typ == "WYCOFANIE":
+                print(data.typ)
+                result = Warehouse.WYCOFANIE(data.product)
+            elif data.typ == "PRZYWROCENIE":
+                print(data.typ)
+                result = Warehouse.PRZYWROCENIE(data.product)
+            elif data.typ == "ZAMKNIJ_SKLEP":
+                print(data.typ)
+                result = Warehouse.ZAMKNIJ_SKLEP()
+                print(result)
+            else:
+                # print("inne")
+                pass
         except Empty:
             print("Kolejka jest pusta, kończenie pracy procesu...")
             break
