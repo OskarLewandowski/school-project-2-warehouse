@@ -4,7 +4,6 @@ from multiprocessing import Manager
 class Warehouse:
     _promo_co_10_wycen = 0
     _original_prices = {}
-
     _products = {
         "BULKA": {"price": 5, "quantity": 100},
         "CHLEB": {"price": 5, "quantity": 100},
@@ -30,14 +29,6 @@ class Warehouse:
 
     @classmethod
     def PRZYWROCENIE(cls, product_name):
-
-        # current_quantity = cls._products[product_name]['quantity']
-        # if current_quantity == -9999999:
-        #     cls._products[product_name]['quantity'] = 0
-        #     response = True
-        # else:
-        #     response = False
-
         cls._products[product_name]['quantity'] = 0
         response = True
 
@@ -103,7 +94,8 @@ class Warehouse:
         manager = Manager()
         cls._promo_co_10_wycen = manager.Value('i', 0)
         cls._original_prices = manager.dict()
-        cls._products = manager.dict({key: manager.dict(value) for key, value in cls._products.items()})
+        product_template = {"price": 5, "quantity": 100}
+        cls._products = manager.dict({key: manager.dict(product_template) for key in cls._products.keys()})
 
 
 def main():
