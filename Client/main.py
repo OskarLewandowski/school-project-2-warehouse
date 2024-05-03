@@ -170,8 +170,9 @@ def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue,
                 answer.product = data.product
                 answer.studentId = INDEKS
                 with lock:
-                    result = Warehouse.ZAMKNIJ_SKLEP()
-                    answer.stanMagazynów = result
+                    resultInventory, resultPrices = Warehouse.ZAMKNIJ_SKLEP()
+                    answer.stanMagazynów = resultInventory
+                    answer.grupaProduktów = resultPrices
                     print(answer)
                     response_queue.put(answer)
 
