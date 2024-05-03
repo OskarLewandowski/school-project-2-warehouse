@@ -16,22 +16,27 @@ class Warehouse:
     @classmethod
     def ZAMKNIJ_SKLEP(cls):
         final_inventory = {product: details['quantity'] for product, details in cls._products.items()}
+        final_prices = {product: details['price'] for product, details in cls._products.items()}
 
         # restore warehouse
         for product in cls._products.keys():
             cls._products[product]['price'] = 5
             cls._products[product]['quantity'] = 100
 
-        return final_inventory
+        return final_inventory, final_prices
 
     @classmethod
     def PRZYWROCENIE(cls, product_name):
-        current_quantity = cls._products[product_name]['quantity']
-        if current_quantity == -9999999:
-            cls._products[product_name]['quantity'] = 0
-            response = True
-        else:
-            response = False
+
+        # current_quantity = cls._products[product_name]['quantity']
+        # if current_quantity == -9999999:
+        #     cls._products[product_name]['quantity'] = 0
+        #     response = True
+        # else:
+        #     response = False
+
+        cls._products[product_name]['quantity'] = 0
+        response = True
 
         return response
 
