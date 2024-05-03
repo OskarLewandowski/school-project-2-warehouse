@@ -1,9 +1,4 @@
-from multiprocessing import Lock
-
-
 class Warehouse:
-    _lock = Lock()
-
     _promo_co_10_wycen = 0
     _original_prices = {}
 
@@ -20,83 +15,77 @@ class Warehouse:
 
     @classmethod
     def ZAMKNIJ_SKLEP(cls):
-        with cls._lock:
-            final_inventory = {product: details['quantity'] for product, details in cls._products.items()}
+        final_inventory = {product: details['quantity'] for product, details in cls._products.items()}
 
-            # restore warehouse
-            for product in cls._products.keys():
-                cls._products[product]['price'] = 5
-                cls._products[product]['quantity'] = 100
+        # restore warehouse
+        for product in cls._products.keys():
+            cls._products[product]['price'] = 5
+            cls._products[product]['quantity'] = 100
 
-            return final_inventory
+        return final_inventory
 
     @classmethod
     def PRZYWROCENIE(cls, product_name):
-        with cls._lock:
-            current_quantity = cls._products[product_name]['quantity']
-            if current_quantity == -9999999:
-                cls._products[product_name]['quantity'] = 0
-                response = True
-            else:
-                response = False
+        current_quantity = cls._products[product_name]['quantity']
+        if current_quantity == -9999999:
+            cls._products[product_name]['quantity'] = 0
+            response = True
+        else:
+            response = False
 
-            return response
+        return response
 
     @classmethod
     def WYCOFANIE(cls, product_name):
-        with cls._lock:
-            current_quantity = cls._products[product_name]['quantity']
+        current_quantity = cls._products[product_name]['quantity']
 
-            if current_quantity != -9999999:
-                cls._products[product_name]['quantity'] = -9999999
-                response = True
-            else:
-                response = False
+        if current_quantity != -9999999:
+            cls._products[product_name]['quantity'] = -9999999
+            response = True
+        else:
+            response = False
 
-            return response
+        return response
 
     @classmethod
     def POJEDYNCZE_ZAOPATRZENIE(cls, product_name):
-        with cls._lock:
-            current_quantity = cls._products[product_name]['quantity']
+        current_quantity = cls._products[product_name]['quantity']
 
-            if current_quantity >= 0:
-                cls._products[product_name]['quantity'] += 1
+        if current_quantity >= 0:
+            cls._products[product_name]['quantity'] += 1
 
-                response = True
-            else:
-                response = False
+            response = True
+        else:
+            response = False
 
-            return response
+        return response
 
     @classmethod
     def POJEDYNCZE_ZAMOWIENIE(cls, product_name):
-        with cls._lock:
-            available_quantity = cls._products[product_name]['quantity']
+        available_quantity = cls._products[product_name]['quantity']
 
-            if available_quantity >= 1:
-                cls._products[product_name]['quantity'] -= 1
-                response = True
-            else:
-                response = False
-            return response
+        if available_quantity >= 1:
+            cls._products[product_name]['quantity'] -= 1
+            response = True
+        else:
+            response = False
+        return response
 
     @classmethod
     def PODAJ_CENE(cls, product_name):
-        with cls._lock:
-            cls._promo_co_10_wycen += 1
+        cls._promo_co_10_wycen += 1
 
-            if cls._promo_co_10_wycen == 10:
-                if product_name not in cls._original_prices:
-                    cls._original_prices[product_name] = cls._products[product_name]['price']
+        if cls._promo_co_10_wycen == 10:
+            if product_name not in cls._original_prices:
+                cls._original_prices[product_name] = cls._products[product_name]['price']
 
-                promo_price = 0
-                cls._promo_co_10_wycen = 0
-            else:
-                promo_price = cls._products[product_name]['price']
+            promo_price = 0
+            cls._promo_co_10_wycen = 0
+        else:
+            promo_price = cls._products[product_name]['price']
 
-            if cls._promo_co_10_wycen == 0 and product_name in cls._original_prices:
-                cls._products[product_name]['price'] = cls._original_prices[product_name]
-                del cls._original_prices[product_name]
+        if cls._promo_co_10_wycen == 0 and product_name in cls._original_prices:
+            cls._products[product_name]['price'] = cls._original_prices[product_name]
+            del cls._original_prices[product_name]
 
-            return promo_price
+        return promo_price

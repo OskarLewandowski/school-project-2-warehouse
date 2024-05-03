@@ -66,9 +66,11 @@ INDEKS = 448700
 def function(queue: multiprocessing.Queue):
     response_queue = multiprocessing.Queue()
 
+    lock = multiprocessing.Lock()
+
     n_workers = 4
 
-    workers = [multiprocessing.Process(target=process, args=(queue, response_queue))
+    workers = [multiprocessing.Process(target=process, args=(queue, response_queue, lock))
                for _ in range(n_workers)]
 
     for worker in workers:
@@ -97,7 +99,7 @@ def function(queue: multiprocessing.Queue):
 
 ## Metoda dla wątków do procesowania. Tylko przykład, można tworzyć różne metody dla różnych wątków, wszystkie opcje są
 ## dozwolone
-def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue):
+def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue, lock: multiprocessing.Lock):
     while True:
         try:
             data = queue.get(timeout=0.7)
@@ -111,34 +113,41 @@ def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue)
 
             if data.typ == "PODAJ_CENE":
                 print(data.typ)
-                result = Warehouse.PODAJ_CENE(data.product)
-                answer.cena = result
+                with lock:
+                    result = Warehouse.PODAJ_CENE(data.product)
+                    answer.cena = result
 
             elif data.typ == "POJEDYNCZE_ZAMOWIENIE":
                 print(data.typ)
-                result = Warehouse.POJEDYNCZE_ZAMOWIENIE(data.product)
-                answer.zrealizowaneZamowienie = result
+                with lock:
+                    result = Warehouse.POJEDYNCZE_ZAMOWIENIE(data.product)
+                    answer.zrealizowaneZamowienie = result
 
             elif data.typ == "POJEDYNCZE_ZAOPATRZENIE":
                 print(data.typ)
-                result = Warehouse.POJEDYNCZE_ZAOPATRZENIE(data.product)
-                answer.zebraneZaopatrzenie = result
+                with lock:
+                    result = Warehouse.POJEDYNCZE_ZAOPATRZENIE(data.product)
+                    answer.zebraneZaopatrzenie = result
             elif data.typ == "WYCOFANIE":
                 print(data.typ)
-                result = Warehouse.WYCOFANIE(data.product)
-                answer.zrealizowaneWycofanie = result
+                with lock:
+                    result = Warehouse.WYCOFANIE(data.product)
+                    answer.zrealizowaneWycofanie = result
             elif data.typ == "PRZYWROCENIE":
                 print(data.typ)
-                result = Warehouse.PRZYWROCENIE(data.product)
-                answer.zrealizowanePrzywrócenie = result
+                with lock:
+                    result = Warehouse.PRZYWROCENIE(data.product)
+                    answer.zrealizowanePrzywrócenie = result
             elif data.typ == "ZAMKNIJ_SKLEP":
                 print(data.typ)
-                result = Warehouse.ZAMKNIJ_SKLEP()
-                answer.stanMagazynów = result
+                with lock:
+                    result = Warehouse.ZAMKNIJ_SKLEP()
+                    answer.stanMagazynów = result
                 print(result)
 
             print(answer)
-            response_queue.put(answer)
+            with lock:
+                response_queue.put(answer)
         except Empty:
             print("Kolejka jest pusta, kończenie pracy procesu...")
             break
