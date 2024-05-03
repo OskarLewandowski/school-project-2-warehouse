@@ -63,10 +63,12 @@ INDEKS = 448700
 
 
 ## Funkcja do przetwarzania danych, otrzymuje na wejściu kolejkę akcji do wykonania
-def function(queue: Queue):
+def function(queue: multiprocessing.Queue):
+    response_queue = multiprocessing.Queue()
+
     n_workers = 4
 
-    workers = [multiprocessing.Process(target=process, args=(queue,))
+    workers = [multiprocessing.Process(target=process, args=(queue, response_queue))
                for _ in range(n_workers)]
 
     for worker in workers:
@@ -75,30 +77,13 @@ def function(queue: Queue):
         worker.join()
 
     # Przykład odpowiedzi dla pojedynczej akcji
-    odp = Replies()
-    odp.studentId = INDEKS
-    odp.id = 0
-    odp.typ = "PODAJ_CENE"
-    odp.cena = 5
-    odp.product = "CHLEB"
-
-    odp2 = Replies()
-    odp2.studentId = INDEKS
-    odp2.id = 0
-    odp2.product = "CHLEB"
-    odp2.liczba = 1
-    odp2.zrealizowaneZamowienie = True
-    odp2.typ = "POJEDYNCZE_ZAMOWIENIE"
-
-    odp3 = Replies()
-    odp3.id = 1
-    odp3.studentId = INDEKS
-    odp3.typ = "ZAMKNIJ_SKLEP"
-    odp3.stanMagazynów = {}
-    odp3.grupaProduktów = {}
-
     # Lista odpowiedzi
-    wynik = [odp, odp2, odp3]
+    wynik = []
+
+    while not response_queue.empty():
+        wynik.append(response_queue.get())
+
+    print(len(wynik))
 
     # Odesłanie listy wyników do serwera
     url = f"http://{SERVER_IP}:{SERVER_PORT}/action/replies"
@@ -112,32 +97,48 @@ def function(queue: Queue):
 
 ## Metoda dla wątków do procesowania. Tylko przykład, można tworzyć różne metody dla różnych wątków, wszystkie opcje są
 ## dozwolone
-def process(queue: multiprocessing.Queue):
+def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue):
     while True:
         try:
             data = queue.get(timeout=0.7)
+            answer = Replies()
+
+            answer.id = data.id
+            answer.typ = data.typ
+            answer.product = data.product
+            answer.liczba = 1
+            answer.studentId = INDEKS
+
             if data.typ == "PODAJ_CENE":
                 print(data.typ)
                 result = Warehouse.PODAJ_CENE(data.product)
+                answer.cena = result
+
             elif data.typ == "POJEDYNCZE_ZAMOWIENIE":
                 print(data.typ)
                 result = Warehouse.POJEDYNCZE_ZAMOWIENIE(data.product)
+                answer.zrealizowaneZamowienie = result
+
             elif data.typ == "POJEDYNCZE_ZAOPATRZENIE":
                 print(data.typ)
                 result = Warehouse.POJEDYNCZE_ZAOPATRZENIE(data.product)
+                answer.zebraneZaopatrzenie = result
             elif data.typ == "WYCOFANIE":
                 print(data.typ)
                 result = Warehouse.WYCOFANIE(data.product)
+                answer.zrealizowaneWycofanie = result
             elif data.typ == "PRZYWROCENIE":
                 print(data.typ)
                 result = Warehouse.PRZYWROCENIE(data.product)
+                answer.zrealizowanePrzywrócenie = result
             elif data.typ == "ZAMKNIJ_SKLEP":
                 print(data.typ)
                 result = Warehouse.ZAMKNIJ_SKLEP()
+                answer.stanMagazynów = result
                 print(result)
-            else:
-                # print("inne")
-                pass
+
+            print(answer)
+            response_queue.put(answer)
         except Empty:
             print("Kolejka jest pusta, kończenie pracy procesu...")
             break
