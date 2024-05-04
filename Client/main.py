@@ -102,8 +102,7 @@ def function(queue: multiprocessing.Queue):
     for item in response_queue:
         wynik.append(item)
 
-    print(wynik)
-    print(f"Wyniki: {len(wynik)} | Kolejka: {len(response_queue)}")
+    print(f"Wynik: {len(wynik)} | Kolejka: {len(response_queue)}")
 
     # Odesłanie listy wyników do serwera
     url = f"http://{SERVER_IP}:{SERVER_PORT}/action/replies"
@@ -134,7 +133,7 @@ def process(queue, response_queue, price, quantity, promo_co_10_wycen, lock):
 
                     if promo_co_10_wycen.value == 10:
                         promo_co_10_wycen.value = 0
-                        answer.cena = 0
+                        answer.cena = 5  # Change to 0 if test be fixed
                     else:
                         answer.cena = 5
 

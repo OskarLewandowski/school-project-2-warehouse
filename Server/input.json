@@ -1,1 +1,9057 @@
-[{"id":0,"typ":"POJEDYNCZE_ZAOPATRZENIE","product":"BULKA","liczba":1,"grupaProduktów":null,"cena":null},{"id":1,"typ":"PODAJ_CENE","product":"SER","liczba":null,"grupaProduktów":null,"cena":null},{"id":2,"typ":"PODAJ_CENE","product":"CHLEB","liczba":null,"grupaProduktów":null,"cena":null},{"id":3,"typ":"GRUPOWE_ZAOPATRZENIE","product":null,"liczba":null,"grupaProduktów":{"MASLO":1,"MIESO":1,"MAKA":1,"JAJKA":1},"cena":null},{"id":4,"typ":"GRUPOWE_ZAOPATRZENIE","product":null,"liczba":null,"grupaProduktów":{"CHLEB":1,"SER":1},"cena":null},{"id":5,"typ":"ZMIEN_CENE","product":"CHLEB","liczba":null,"grupaProduktów":null,"cena":38},{"id":6,"typ":"GRUPOWE_ZAOPATRZENIE","product":null,"liczba":null,"grupaProduktów":{"BULKA":1,"CHLEB":1,"MIESO":1,"SOK":1,"JAJKA":1},"cena":null},{"id":7,"typ":"GRUPOWE_ZAOPATRZENIE","product":null,"liczba":null,"grupaProduktów":{"MASLO":1,"SOK":1},"cena":null},{"id":8,"typ":"ZMIEN_CENE","product":"MIESO","liczba":null,"grupaProduktów":null,"cena":88},{"id":9,"typ":"REZERWACJA","product":"JAJKA","liczba":1,"grupaProduktów":null,"cena":null},{"id":10,"typ":"POJEDYNCZE_ZAOPATRZENIE","product":"MASLO","liczba":1,"grupaProduktów":null,"cena":null},{"id":11,"typ":"GRUPOWE_ZAMOWIENIE","product":null,"liczba":null,"grupaProduktów":{"CHLEB":1,"SER":1,"MIESO":1,"SOK":1},"cena":null},{"id":12,"typ":"WYCOFANIE","product":"CHLEB","liczba":null,"grupaProduktów":null,"cena":null},{"id":13,"typ":"POJEDYNCZE_ZAOPATRZENIE","product":"SER","liczba":1,"grupaProduktów":null,"cena":null},{"id":14,"typ":"GRUPOWE_ZAOPATRZENIE","product":null,"liczba":null,"grupaProduktów":{"CHLEB":1,"JAJKA":1},"cena":null},{"id":15,"typ":"GRUPOWE_ZAOPATRZENIE","product":null,"liczba":null,"grupaProduktów":{"SER":1,"SOK":1},"cena":null},{"id":16,"typ":"PODAJ_CENE","product":"MAKA","liczba":null,"grupaProduktów":null,"cena":null},{"id":17,"typ":"ZMIEN_CENE","product":"SER","liczba":null,"grupaProduktów":null,"cena":35},{"id":18,"typ":"ODBIÓR_REZERWACJI","product":"MAKA","liczba":1,"grupaProduktów":null,"cena":null},{"id":19,"typ":"POJEDYNCZE_ZAOPATRZENIE","product":"MIESO","liczba":1,"grupaProduktów":null,"cena":null},{"id":20,"typ":"ZAMKNIJ_SKLEP","product":null,"liczba":null,"grupaProduktów":null,"cena":null}]
+[
+  {
+    "id": 0,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MIESO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 1,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 2,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SER": 1,
+      "MASLO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 3,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 4,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MIESO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 5,
+    "typ": "ZMIEN_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 71
+  },
+  {
+    "id": 6,
+    "typ": "ZMIEN_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 5
+  },
+  {
+    "id": 7,
+    "typ": "WYCOFANIE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 8,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 9,
+    "typ": "REZERWACJA",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 10,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 11,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MASLO": 1,
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 12,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 13,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MASLO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 14,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 15,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "MIESO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 16,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 17,
+    "typ": "ZMIEN_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 42
+  },
+  {
+    "id": 18,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 19,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 20,
+    "typ": "WYCOFANIE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 21,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 22,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 23,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 24,
+    "typ": "PODAJ_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 25,
+    "typ": "PODAJ_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 26,
+    "typ": "INWENTARYZACJA",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 27,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 28,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 29,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SER": 1,
+      "MIESO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 30,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 31,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 32,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 33,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 34,
+    "typ": "ZMIEN_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 19
+  },
+  {
+    "id": 35,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 36,
+    "typ": "REZERWACJA",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 37,
+    "typ": "REZERWACJA",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 38,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "SER": 1,
+      "MIESO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 39,
+    "typ": "REZERWACJA",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 40,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 41,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 42,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 43,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 44,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 45,
+    "typ": "REZERWACJA",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 46,
+    "typ": "PODAJ_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 47,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 48,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 49,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 50,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 51,
+    "typ": "WYCOFANIE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 52,
+    "typ": "PODAJ_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 53,
+    "typ": "REZERWACJA",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 54,
+    "typ": "PRZYWROCENIE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 55,
+    "typ": "ZMIEN_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 42
+  },
+  {
+    "id": 56,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 57,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "MIESO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 58,
+    "typ": "PODAJ_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 59,
+    "typ": "PODAJ_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 60,
+    "typ": "PODAJ_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 61,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 62,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MASLO": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 63,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 64,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 65,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 66,
+    "typ": "INWENTARYZACJA",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 67,
+    "typ": "WYCOFANIE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 68,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 69,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 70,
+    "typ": "ZMIEN_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 33
+  },
+  {
+    "id": 71,
+    "typ": "PODAJ_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 72,
+    "typ": "PODAJ_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 73,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MASLO": 1,
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 74,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MASLO": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 75,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MIESO": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 76,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 77,
+    "typ": "RAPORT_SPRZEDAŻY",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 78,
+    "typ": "REZERWACJA",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 79,
+    "typ": "PODAJ_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 80,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 81,
+    "typ": "ZMIEN_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 24
+  },
+  {
+    "id": 82,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 83,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 84,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 85,
+    "typ": "REZERWACJA",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 86,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 87,
+    "typ": "REZERWACJA",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 88,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 89,
+    "typ": "ZMIEN_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 38
+  },
+  {
+    "id": 90,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 91,
+    "typ": "ZMIEN_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 62
+  },
+  {
+    "id": 92,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 93,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 94,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 95,
+    "typ": "REZERWACJA",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 96,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 97,
+    "typ": "ZMIEN_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 54
+  },
+  {
+    "id": 98,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 99,
+    "typ": "ZMIEN_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 43
+  },
+  {
+    "id": 100,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 101,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 102,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 103,
+    "typ": "PODAJ_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 104,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MASLO": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 105,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 106,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 107,
+    "typ": "PODAJ_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 108,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 109,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 110,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 111,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 112,
+    "typ": "PODAJ_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 113,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MIESO": 1,
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 114,
+    "typ": "RAPORT_SPRZEDAŻY",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 115,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 116,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 117,
+    "typ": "ZMIEN_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 94
+  },
+  {
+    "id": 118,
+    "typ": "ZMIEN_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 10
+  },
+  {
+    "id": 119,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 120,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MASLO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 121,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 122,
+    "typ": "PODAJ_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 123,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 124,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 125,
+    "typ": "ZMIEN_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 14
+  },
+  {
+    "id": 126,
+    "typ": "ZMIEN_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 10
+  },
+  {
+    "id": 127,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 128,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 129,
+    "typ": "ZMIEN_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 73
+  },
+  {
+    "id": 130,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 131,
+    "typ": "REZERWACJA",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 132,
+    "typ": "ZMIEN_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 61
+  },
+  {
+    "id": 133,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 134,
+    "typ": "ZMIEN_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 25
+  },
+  {
+    "id": 135,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 136,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 137,
+    "typ": "REZERWACJA",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 138,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MASLO": 1,
+      "MIESO": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 139,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 140,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 141,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MASLO": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 142,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 143,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 144,
+    "typ": "ZMIEN_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 31
+  },
+  {
+    "id": 145,
+    "typ": "REZERWACJA",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 146,
+    "typ": "PODAJ_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 147,
+    "typ": "ZMIEN_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 98
+  },
+  {
+    "id": 148,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 149,
+    "typ": "ZMIEN_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 58
+  },
+  {
+    "id": 150,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "MIESO": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 151,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 152,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MASLO": 1,
+      "MIESO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 153,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 154,
+    "typ": "PODAJ_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 155,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 156,
+    "typ": "PODAJ_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 157,
+    "typ": "REZERWACJA",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 158,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 159,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MIESO": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 160,
+    "typ": "ZMIEN_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 81
+  },
+  {
+    "id": 161,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 162,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 163,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 164,
+    "typ": "ZMIEN_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 57
+  },
+  {
+    "id": 165,
+    "typ": "REZERWACJA",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 166,
+    "typ": "REZERWACJA",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 167,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 168,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 169,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 170,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 171,
+    "typ": "PODAJ_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 172,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 173,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 174,
+    "typ": "PODAJ_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 175,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 176,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 177,
+    "typ": "PODAJ_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 178,
+    "typ": "PODAJ_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 179,
+    "typ": "ZMIEN_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 48
+  },
+  {
+    "id": 180,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "MASLO": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 181,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 182,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "SER": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 183,
+    "typ": "PODAJ_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 184,
+    "typ": "ZMIEN_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 11
+  },
+  {
+    "id": 185,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 186,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 187,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 188,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MIESO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 189,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 190,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 191,
+    "typ": "REZERWACJA",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 192,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 193,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MIESO": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 194,
+    "typ": "PODAJ_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 195,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 196,
+    "typ": "ZMIEN_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 70
+  },
+  {
+    "id": 197,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "SER": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 198,
+    "typ": "ZMIEN_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 23
+  },
+  {
+    "id": 199,
+    "typ": "ZMIEN_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 99
+  },
+  {
+    "id": 200,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "SER": 1,
+      "MIESO": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 201,
+    "typ": "RAPORT_SPRZEDAŻY",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 202,
+    "typ": "PODAJ_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 203,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 204,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 205,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 206,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 207,
+    "typ": "REZERWACJA",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 208,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 209,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 210,
+    "typ": "REZERWACJA",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 211,
+    "typ": "ZMIEN_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 54
+  },
+  {
+    "id": 212,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MIESO": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 213,
+    "typ": "PRZYWROCENIE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 214,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MIESO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 215,
+    "typ": "PODAJ_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 216,
+    "typ": "ZMIEN_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 81
+  },
+  {
+    "id": 217,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MIESO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 218,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 219,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MASLO": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 220,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 221,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 222,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 223,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 224,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 225,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 226,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 227,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 228,
+    "typ": "PODAJ_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 229,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "MASLO": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 230,
+    "typ": "ZMIEN_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 87
+  },
+  {
+    "id": 231,
+    "typ": "INWENTARYZACJA",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 232,
+    "typ": "PODAJ_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 233,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 234,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 235,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MASLO": 1,
+      "MIESO": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 236,
+    "typ": "PODAJ_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 237,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 238,
+    "typ": "PODAJ_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 239,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 240,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 241,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 242,
+    "typ": "INWENTARYZACJA",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 243,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 244,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 245,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "MIESO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 246,
+    "typ": "WYCOFANIE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 247,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 248,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 249,
+    "typ": "ZMIEN_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 97
+  },
+  {
+    "id": 250,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MIESO": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 251,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 252,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 253,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 254,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 255,
+    "typ": "ZMIEN_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 22
+  },
+  {
+    "id": 256,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 257,
+    "typ": "ZMIEN_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 97
+  },
+  {
+    "id": 258,
+    "typ": "PODAJ_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 259,
+    "typ": "WYCOFANIE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 260,
+    "typ": "ZMIEN_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 53
+  },
+  {
+    "id": 261,
+    "typ": "PODAJ_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 262,
+    "typ": "REZERWACJA",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 263,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 264,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 265,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 266,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 267,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 268,
+    "typ": "PODAJ_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 269,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 270,
+    "typ": "PODAJ_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 271,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 272,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 273,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 274,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 275,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 276,
+    "typ": "ZMIEN_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 78
+  },
+  {
+    "id": 277,
+    "typ": "ZMIEN_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 74
+  },
+  {
+    "id": 278,
+    "typ": "REZERWACJA",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 279,
+    "typ": "REZERWACJA",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 280,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 281,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MASLO": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 282,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MASLO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 283,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 284,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MIESO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 285,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 286,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "MIESO": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 287,
+    "typ": "PODAJ_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 288,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MIESO": 1,
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 289,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 290,
+    "typ": "REZERWACJA",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 291,
+    "typ": "PODAJ_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 292,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 293,
+    "typ": "ZMIEN_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 37
+  },
+  {
+    "id": 294,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 295,
+    "typ": "PODAJ_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 296,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 297,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MASLO": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 298,
+    "typ": "REZERWACJA",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 299,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 300,
+    "typ": "PODAJ_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 301,
+    "typ": "ZMIEN_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 20
+  },
+  {
+    "id": 302,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MASLO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 303,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 304,
+    "typ": "RAPORT_SPRZEDAŻY",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 305,
+    "typ": "ZMIEN_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 8
+  },
+  {
+    "id": 306,
+    "typ": "PODAJ_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 307,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MIESO": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 308,
+    "typ": "REZERWACJA",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 309,
+    "typ": "REZERWACJA",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 310,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 311,
+    "typ": "PODAJ_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 312,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 313,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 314,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "MIESO": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 315,
+    "typ": "PODAJ_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 316,
+    "typ": "ZMIEN_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 83
+  },
+  {
+    "id": 317,
+    "typ": "RAPORT_SPRZEDAŻY",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 318,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 319,
+    "typ": "PODAJ_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 320,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 321,
+    "typ": "REZERWACJA",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 322,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 323,
+    "typ": "REZERWACJA",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 324,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 325,
+    "typ": "ZMIEN_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 24
+  },
+  {
+    "id": 326,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 327,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MASLO": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 328,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MIESO": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 329,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 330,
+    "typ": "PODAJ_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 331,
+    "typ": "ZMIEN_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 93
+  },
+  {
+    "id": 332,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SER": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 333,
+    "typ": "ZMIEN_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 22
+  },
+  {
+    "id": 334,
+    "typ": "PRZYWROCENIE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 335,
+    "typ": "INWENTARYZACJA",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 336,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MASLO": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 337,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 338,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 339,
+    "typ": "REZERWACJA",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 340,
+    "typ": "ZMIEN_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 20
+  },
+  {
+    "id": 341,
+    "typ": "REZERWACJA",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 342,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 343,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 344,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 345,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MIESO": 1,
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 346,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 347,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 348,
+    "typ": "WYCOFANIE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 349,
+    "typ": "PODAJ_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 350,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 351,
+    "typ": "ZMIEN_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 35
+  },
+  {
+    "id": 352,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 353,
+    "typ": "REZERWACJA",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 354,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 355,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MASLO": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 356,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 357,
+    "typ": "WYCOFANIE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 358,
+    "typ": "REZERWACJA",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 359,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 360,
+    "typ": "RAPORT_SPRZEDAŻY",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 361,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MASLO": 1,
+      "MIESO": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 362,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 363,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 364,
+    "typ": "RAPORT_SPRZEDAŻY",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 365,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 366,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 367,
+    "typ": "ZMIEN_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 55
+  },
+  {
+    "id": 368,
+    "typ": "ZMIEN_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 67
+  },
+  {
+    "id": 369,
+    "typ": "WYCOFANIE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 370,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 371,
+    "typ": "ZMIEN_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 32
+  },
+  {
+    "id": 372,
+    "typ": "ZMIEN_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 19
+  },
+  {
+    "id": 373,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 374,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 375,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MASLO": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 376,
+    "typ": "PODAJ_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 377,
+    "typ": "PODAJ_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 378,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 379,
+    "typ": "PRZYWROCENIE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 380,
+    "typ": "WYCOFANIE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 381,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 382,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 383,
+    "typ": "ZMIEN_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 40
+  },
+  {
+    "id": 384,
+    "typ": "PODAJ_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 385,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 386,
+    "typ": "PODAJ_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 387,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 388,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 389,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "SER": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 390,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 391,
+    "typ": "REZERWACJA",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 392,
+    "typ": "REZERWACJA",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 393,
+    "typ": "REZERWACJA",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 394,
+    "typ": "ZMIEN_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 96
+  },
+  {
+    "id": 395,
+    "typ": "INWENTARYZACJA",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 396,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 397,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 398,
+    "typ": "ZMIEN_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 71
+  },
+  {
+    "id": 399,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 400,
+    "typ": "REZERWACJA",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 401,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 402,
+    "typ": "ZMIEN_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 48
+  },
+  {
+    "id": 403,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 404,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "MASLO": 1,
+      "MIESO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 405,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 406,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 407,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 408,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 409,
+    "typ": "REZERWACJA",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 410,
+    "typ": "ZMIEN_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 92
+  },
+  {
+    "id": 411,
+    "typ": "REZERWACJA",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 412,
+    "typ": "REZERWACJA",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 413,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 414,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "MIESO": 1,
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 415,
+    "typ": "PODAJ_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 416,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MIESO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 417,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MASLO": 1,
+      "MIESO": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 418,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "MASLO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 419,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 420,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MASLO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 421,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 422,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 423,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 424,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 425,
+    "typ": "RAPORT_SPRZEDAŻY",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 426,
+    "typ": "PODAJ_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 427,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 428,
+    "typ": "REZERWACJA",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 429,
+    "typ": "PODAJ_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 430,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 431,
+    "typ": "REZERWACJA",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 432,
+    "typ": "INWENTARYZACJA",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 433,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 434,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 435,
+    "typ": "PODAJ_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 436,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 437,
+    "typ": "PODAJ_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 438,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 439,
+    "typ": "PODAJ_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 440,
+    "typ": "PODAJ_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 441,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MASLO": 1,
+      "MIESO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 442,
+    "typ": "PODAJ_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 443,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 444,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 445,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 446,
+    "typ": "PODAJ_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 447,
+    "typ": "REZERWACJA",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 448,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MIESO": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 449,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 450,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 451,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 452,
+    "typ": "ZMIEN_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 22
+  },
+  {
+    "id": 453,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "MIESO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 454,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 455,
+    "typ": "RAPORT_SPRZEDAŻY",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 456,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MIESO": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 457,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 458,
+    "typ": "ZMIEN_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 96
+  },
+  {
+    "id": 459,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 460,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 461,
+    "typ": "PRZYWROCENIE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 462,
+    "typ": "REZERWACJA",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 463,
+    "typ": "PODAJ_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 464,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 465,
+    "typ": "REZERWACJA",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 466,
+    "typ": "REZERWACJA",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 467,
+    "typ": "PODAJ_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 468,
+    "typ": "PODAJ_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 469,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "SER": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 470,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "MIESO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 471,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 472,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MIESO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 473,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 474,
+    "typ": "ZMIEN_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 68
+  },
+  {
+    "id": 475,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 476,
+    "typ": "WYCOFANIE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 477,
+    "typ": "ZMIEN_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 59
+  },
+  {
+    "id": 478,
+    "typ": "REZERWACJA",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 479,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 480,
+    "typ": "ZMIEN_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 18
+  },
+  {
+    "id": 481,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 482,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 483,
+    "typ": "ZMIEN_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 16
+  },
+  {
+    "id": 484,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 485,
+    "typ": "ZMIEN_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 93
+  },
+  {
+    "id": 486,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 487,
+    "typ": "ZMIEN_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 54
+  },
+  {
+    "id": 488,
+    "typ": "RAPORT_SPRZEDAŻY",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 489,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "MIESO": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 490,
+    "typ": "REZERWACJA",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 491,
+    "typ": "ZMIEN_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 75
+  },
+  {
+    "id": 492,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 493,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MASLO": 1,
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 494,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MASLO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 495,
+    "typ": "REZERWACJA",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 496,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 497,
+    "typ": "PODAJ_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 498,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 499,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "MIESO": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 500,
+    "typ": "REZERWACJA",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 501,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MASLO": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 502,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 503,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MASLO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 504,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 505,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MASLO": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 506,
+    "typ": "ZMIEN_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 14
+  },
+  {
+    "id": 507,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "MASLO": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 508,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 509,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 510,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 511,
+    "typ": "PODAJ_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 512,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 513,
+    "typ": "PODAJ_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 514,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 515,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 516,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 517,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 518,
+    "typ": "PODAJ_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 519,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MASLO": 1,
+      "MIESO": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 520,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 521,
+    "typ": "REZERWACJA",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 522,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 523,
+    "typ": "PODAJ_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 524,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 525,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 526,
+    "typ": "WYCOFANIE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 527,
+    "typ": "ZMIEN_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 53
+  },
+  {
+    "id": 528,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 529,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MIESO": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 530,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 531,
+    "typ": "RAPORT_SPRZEDAŻY",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 532,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SER": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 533,
+    "typ": "PODAJ_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 534,
+    "typ": "PODAJ_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 535,
+    "typ": "REZERWACJA",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 536,
+    "typ": "INWENTARYZACJA",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 537,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 538,
+    "typ": "ZMIEN_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 89
+  },
+  {
+    "id": 539,
+    "typ": "INWENTARYZACJA",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 540,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 541,
+    "typ": "ZMIEN_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 23
+  },
+  {
+    "id": 542,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "SER": 1,
+      "MIESO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 543,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 544,
+    "typ": "ZMIEN_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 32
+  },
+  {
+    "id": 545,
+    "typ": "ZMIEN_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 48
+  },
+  {
+    "id": 546,
+    "typ": "REZERWACJA",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 547,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 548,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 549,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 550,
+    "typ": "ZMIEN_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 76
+  },
+  {
+    "id": 551,
+    "typ": "PODAJ_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 552,
+    "typ": "ZMIEN_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 23
+  },
+  {
+    "id": 553,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 554,
+    "typ": "PODAJ_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 555,
+    "typ": "WYCOFANIE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 556,
+    "typ": "ZMIEN_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 61
+  },
+  {
+    "id": 557,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 558,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 559,
+    "typ": "WYCOFANIE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 560,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 561,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MIESO": 1,
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 562,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 563,
+    "typ": "PODAJ_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 564,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 565,
+    "typ": "ZMIEN_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 43
+  },
+  {
+    "id": 566,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 567,
+    "typ": "ZMIEN_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 72
+  },
+  {
+    "id": 568,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MIESO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 569,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SER": 1,
+      "MIESO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 570,
+    "typ": "PRZYWROCENIE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 571,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "MIESO": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 572,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 573,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 574,
+    "typ": "ZMIEN_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 73
+  },
+  {
+    "id": 575,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 576,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 577,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MIESO": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 578,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MIESO": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 579,
+    "typ": "REZERWACJA",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 580,
+    "typ": "PODAJ_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 581,
+    "typ": "REZERWACJA",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 582,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 583,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 584,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 585,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 586,
+    "typ": "REZERWACJA",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 587,
+    "typ": "PODAJ_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 588,
+    "typ": "PODAJ_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 589,
+    "typ": "PODAJ_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 590,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 591,
+    "typ": "PODAJ_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 592,
+    "typ": "PODAJ_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 593,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 594,
+    "typ": "INWENTARYZACJA",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 595,
+    "typ": "RAPORT_SPRZEDAŻY",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 596,
+    "typ": "ZMIEN_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 60
+  },
+  {
+    "id": 597,
+    "typ": "ZMIEN_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 99
+  },
+  {
+    "id": 598,
+    "typ": "PODAJ_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 599,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MASLO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 600,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "MASLO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 601,
+    "typ": "PODAJ_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 602,
+    "typ": "ZMIEN_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 62
+  },
+  {
+    "id": 603,
+    "typ": "PODAJ_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 604,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 605,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MASLO": 1,
+      "MIESO": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 606,
+    "typ": "PRZYWROCENIE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 607,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 608,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "MIESO": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 609,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 610,
+    "typ": "PODAJ_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 611,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 612,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 613,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 614,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 615,
+    "typ": "RAPORT_SPRZEDAŻY",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 616,
+    "typ": "ZMIEN_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 22
+  },
+  {
+    "id": 617,
+    "typ": "REZERWACJA",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 618,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 619,
+    "typ": "INWENTARYZACJA",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 620,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SER": 1,
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 621,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 622,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 623,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 624,
+    "typ": "ZMIEN_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 61
+  },
+  {
+    "id": 625,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 626,
+    "typ": "PODAJ_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 627,
+    "typ": "REZERWACJA",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 628,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 629,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 630,
+    "typ": "PODAJ_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 631,
+    "typ": "REZERWACJA",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 632,
+    "typ": "ZMIEN_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 2
+  },
+  {
+    "id": 633,
+    "typ": "RAPORT_SPRZEDAŻY",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 634,
+    "typ": "RAPORT_SPRZEDAŻY",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 635,
+    "typ": "ZMIEN_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 96
+  },
+  {
+    "id": 636,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MIESO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 637,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MIESO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 638,
+    "typ": "INWENTARYZACJA",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 639,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 640,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 641,
+    "typ": "ZMIEN_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 61
+  },
+  {
+    "id": 642,
+    "typ": "ZMIEN_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 78
+  },
+  {
+    "id": 643,
+    "typ": "ZMIEN_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 35
+  },
+  {
+    "id": 644,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "MIESO": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 645,
+    "typ": "RAPORT_SPRZEDAŻY",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 646,
+    "typ": "ZMIEN_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 43
+  },
+  {
+    "id": 647,
+    "typ": "INWENTARYZACJA",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 648,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 649,
+    "typ": "INWENTARYZACJA",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 650,
+    "typ": "PODAJ_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 651,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 652,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 653,
+    "typ": "ZMIEN_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 54
+  },
+  {
+    "id": 654,
+    "typ": "ZMIEN_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 15
+  },
+  {
+    "id": 655,
+    "typ": "PODAJ_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 656,
+    "typ": "PRZYWROCENIE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 657,
+    "typ": "PODAJ_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 658,
+    "typ": "PODAJ_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 659,
+    "typ": "INWENTARYZACJA",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 660,
+    "typ": "PRZYWROCENIE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 661,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 662,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MIESO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 663,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 664,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 665,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 666,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 667,
+    "typ": "PODAJ_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 668,
+    "typ": "PODAJ_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 669,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 670,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 671,
+    "typ": "PODAJ_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 672,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 673,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MASLO": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 674,
+    "typ": "ZMIEN_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 51
+  },
+  {
+    "id": 675,
+    "typ": "PODAJ_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 676,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 677,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 678,
+    "typ": "ZMIEN_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 18
+  },
+  {
+    "id": 679,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MIESO": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 680,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 681,
+    "typ": "REZERWACJA",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 682,
+    "typ": "ZMIEN_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 49
+  },
+  {
+    "id": 683,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 684,
+    "typ": "ZMIEN_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 33
+  },
+  {
+    "id": 685,
+    "typ": "ZMIEN_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 65
+  },
+  {
+    "id": 686,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 687,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 688,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 689,
+    "typ": "REZERWACJA",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 690,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 691,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 692,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 693,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 694,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 695,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MASLO": 1,
+      "MIESO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 696,
+    "typ": "PODAJ_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 697,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "MIESO": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 698,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MASLO": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 699,
+    "typ": "PODAJ_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 700,
+    "typ": "REZERWACJA",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 701,
+    "typ": "PODAJ_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 702,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MASLO": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 703,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 704,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 705,
+    "typ": "INWENTARYZACJA",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 706,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 707,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 708,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 709,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 710,
+    "typ": "REZERWACJA",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 711,
+    "typ": "ZMIEN_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 66
+  },
+  {
+    "id": 712,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 713,
+    "typ": "REZERWACJA",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 714,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 715,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 716,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SER": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 717,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MASLO": 1,
+      "MIESO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 718,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 719,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MIESO": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 720,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 721,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 722,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 723,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 724,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 725,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 726,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MIESO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 727,
+    "typ": "ZMIEN_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 57
+  },
+  {
+    "id": 728,
+    "typ": "ZMIEN_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 47
+  },
+  {
+    "id": 729,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 730,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MIESO": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 731,
+    "typ": "ZMIEN_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 25
+  },
+  {
+    "id": 732,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MIESO": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 733,
+    "typ": "ZMIEN_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 62
+  },
+  {
+    "id": 734,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 735,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 736,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 737,
+    "typ": "ZMIEN_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 58
+  },
+  {
+    "id": 738,
+    "typ": "PODAJ_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 739,
+    "typ": "ZMIEN_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 15
+  },
+  {
+    "id": 740,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 741,
+    "typ": "PODAJ_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 742,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 743,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 744,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 745,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 746,
+    "typ": "PODAJ_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 747,
+    "typ": "REZERWACJA",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 748,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MIESO": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 749,
+    "typ": "PODAJ_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 750,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 751,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 752,
+    "typ": "PODAJ_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 753,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 754,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 755,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 756,
+    "typ": "PODAJ_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 757,
+    "typ": "PODAJ_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 758,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 759,
+    "typ": "ZMIEN_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 89
+  },
+  {
+    "id": 760,
+    "typ": "ZMIEN_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 39
+  },
+  {
+    "id": 761,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "SER": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 762,
+    "typ": "REZERWACJA",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 763,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 764,
+    "typ": "ZMIEN_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 92
+  },
+  {
+    "id": 765,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "MIESO": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 766,
+    "typ": "PODAJ_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 767,
+    "typ": "ZMIEN_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 93
+  },
+  {
+    "id": 768,
+    "typ": "ZMIEN_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 46
+  },
+  {
+    "id": 769,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 770,
+    "typ": "PODAJ_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 771,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MIESO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 772,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "MASLO": 1,
+      "MIESO": 1,
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 773,
+    "typ": "PODAJ_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 774,
+    "typ": "REZERWACJA",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 775,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 776,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "MASLO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 777,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 778,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MIESO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 779,
+    "typ": "PODAJ_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 780,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MASLO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 781,
+    "typ": "ZMIEN_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 71
+  },
+  {
+    "id": 782,
+    "typ": "ZMIEN_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 15
+  },
+  {
+    "id": 783,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "MIESO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 784,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 785,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 786,
+    "typ": "ZMIEN_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 23
+  },
+  {
+    "id": 787,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 788,
+    "typ": "REZERWACJA",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 789,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 790,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 791,
+    "typ": "ZMIEN_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 15
+  },
+  {
+    "id": 792,
+    "typ": "REZERWACJA",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 793,
+    "typ": "PODAJ_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 794,
+    "typ": "ZMIEN_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 20
+  },
+  {
+    "id": 795,
+    "typ": "REZERWACJA",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 796,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 797,
+    "typ": "PRZYWROCENIE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 798,
+    "typ": "ZMIEN_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 89
+  },
+  {
+    "id": 799,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 800,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MASLO": 1,
+      "MIESO": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 801,
+    "typ": "PODAJ_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 802,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 803,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 804,
+    "typ": "REZERWACJA",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 805,
+    "typ": "ZMIEN_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 37
+  },
+  {
+    "id": 806,
+    "typ": "PODAJ_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 807,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 808,
+    "typ": "REZERWACJA",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 809,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 810,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 811,
+    "typ": "PODAJ_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 812,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 813,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 814,
+    "typ": "RAPORT_SPRZEDAŻY",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 815,
+    "typ": "ZMIEN_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 27
+  },
+  {
+    "id": 816,
+    "typ": "ZMIEN_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 85
+  },
+  {
+    "id": 817,
+    "typ": "PRZYWROCENIE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 818,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 819,
+    "typ": "RAPORT_SPRZEDAŻY",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 820,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MIESO": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 821,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 822,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 823,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 824,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MASLO": 1,
+      "MIESO": 1,
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 825,
+    "typ": "PODAJ_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 826,
+    "typ": "PODAJ_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 827,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 828,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 829,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 830,
+    "typ": "REZERWACJA",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 831,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "MIESO": 1,
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 832,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 833,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 834,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 835,
+    "typ": "PODAJ_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 836,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MASLO": 1,
+      "MIESO": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 837,
+    "typ": "INWENTARYZACJA",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 838,
+    "typ": "PODAJ_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 839,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 840,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 841,
+    "typ": "REZERWACJA",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 842,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 843,
+    "typ": "ZMIEN_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 64
+  },
+  {
+    "id": 844,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 845,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 846,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 847,
+    "typ": "ZMIEN_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 52
+  },
+  {
+    "id": 848,
+    "typ": "REZERWACJA",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 849,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 850,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 851,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 852,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 853,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "SER": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 854,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 855,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SER": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 856,
+    "typ": "REZERWACJA",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 857,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 858,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 859,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 860,
+    "typ": "PODAJ_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 861,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 862,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MIESO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 863,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 864,
+    "typ": "PODAJ_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 865,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 866,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "MIESO": 1,
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 867,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MIESO": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 868,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 869,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 870,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 871,
+    "typ": "ZMIEN_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 89
+  },
+  {
+    "id": 872,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 873,
+    "typ": "REZERWACJA",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 874,
+    "typ": "REZERWACJA",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 875,
+    "typ": "PODAJ_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 876,
+    "typ": "PRZYWROCENIE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 877,
+    "typ": "REZERWACJA",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 878,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 879,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 880,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 881,
+    "typ": "ZMIEN_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 92
+  },
+  {
+    "id": 882,
+    "typ": "ZMIEN_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 9
+  },
+  {
+    "id": 883,
+    "typ": "PODAJ_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 884,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MASLO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 885,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 886,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 887,
+    "typ": "PODAJ_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 888,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 889,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 890,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 891,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 892,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "MIESO": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 893,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MASLO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 894,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 895,
+    "typ": "PODAJ_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 896,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SER": 1,
+      "MASLO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 897,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "MIESO": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 898,
+    "typ": "INWENTARYZACJA",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 899,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 900,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 901,
+    "typ": "WYCOFANIE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 902,
+    "typ": "PODAJ_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 903,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 904,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 905,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "SER": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 906,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SER": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 907,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 908,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 909,
+    "typ": "PODAJ_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 910,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "MASLO": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 911,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 912,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 913,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MASLO": 1,
+      "MIESO": 1,
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 914,
+    "typ": "WYCOFANIE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 915,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 916,
+    "typ": "ZMIEN_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 90
+  },
+  {
+    "id": 917,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 918,
+    "typ": "ZMIEN_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 17
+  },
+  {
+    "id": 919,
+    "typ": "PODAJ_CENE",
+    "product": "SER",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 920,
+    "typ": "REZERWACJA",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 921,
+    "typ": "PODAJ_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 922,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 923,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 924,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MASLO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 925,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 926,
+    "typ": "REZERWACJA",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 927,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 928,
+    "typ": "ZMIEN_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 34
+  },
+  {
+    "id": 929,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 930,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MASLO": 1,
+      "MIESO": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 931,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MASLO": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 932,
+    "typ": "PODAJ_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 933,
+    "typ": "ZMIEN_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 31
+  },
+  {
+    "id": 934,
+    "typ": "PODAJ_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 935,
+    "typ": "REZERWACJA",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 936,
+    "typ": "ZMIEN_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 96
+  },
+  {
+    "id": 937,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "SER": 1,
+      "MIESO": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 938,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 939,
+    "typ": "ZMIEN_CENE",
+    "product": "JAJKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 72
+  },
+  {
+    "id": 940,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 941,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 942,
+    "typ": "REZERWACJA",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 943,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 944,
+    "typ": "REZERWACJA",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 945,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SER": 1,
+      "MIESO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 946,
+    "typ": "ZMIEN_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 71
+  },
+  {
+    "id": 947,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MASLO": 1,
+      "MIESO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 948,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 949,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "MASLO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 950,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 951,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 952,
+    "typ": "REZERWACJA",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 953,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 954,
+    "typ": "PODAJ_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 955,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MASLO": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 956,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 957,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 958,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MASLO": 1,
+      "MIESO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 959,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 960,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MASLO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 961,
+    "typ": "ZMIEN_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 100
+  },
+  {
+    "id": 962,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 963,
+    "typ": "PODAJ_CENE",
+    "product": "CHLEB",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 964,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MAKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 965,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 966,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MIESO": 1,
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 967,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "JAJKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 968,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 969,
+    "typ": "PODAJ_CENE",
+    "product": "SOK",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 970,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 971,
+    "typ": "PODAJ_CENE",
+    "product": "MAKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 972,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "MASLO": 1,
+      "MIESO": 1,
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 973,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MIESO": 1,
+      "SOK": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 974,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "MIESO": 1,
+      "SOK": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 975,
+    "typ": "ZMIEN_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 54
+  },
+  {
+    "id": 976,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "MASLO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 977,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 978,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "CHLEB",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 979,
+    "typ": "ZMIEN_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 39
+  },
+  {
+    "id": 980,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 981,
+    "typ": "REZERWACJA",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 982,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 983,
+    "typ": "ZMIEN_CENE",
+    "product": "MASLO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": 42
+  },
+  {
+    "id": 984,
+    "typ": "PODAJ_CENE",
+    "product": "BULKA",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 985,
+    "typ": "REZERWACJA",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 986,
+    "typ": "PODAJ_CENE",
+    "product": "MIESO",
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 987,
+    "typ": "INWENTARYZACJA",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 988,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "MIESO",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 989,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SOK": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 990,
+    "typ": "ODBIÓR_REZERWACJI",
+    "product": "SOK",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 991,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "MASLO": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 992,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 993,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "MIESO": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 994,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "SER",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 995,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "SER": 1,
+      "MASLO": 1,
+      "SOK": 1,
+      "MAKA": 1,
+      "JAJKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 996,
+    "typ": "GRUPOWE_ZAOPATRZENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "BULKA": 1,
+      "CHLEB": 1,
+      "MASLO": 1,
+      "MAKA": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 997,
+    "typ": "POJEDYNCZE_ZAOPATRZENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 998,
+    "typ": "GRUPOWE_ZAMOWIENIE",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": {
+      "CHLEB": 1,
+      "SER": 1,
+      "MASLO": 1,
+      "MIESO": 1
+    },
+    "cena": null
+  },
+  {
+    "id": 999,
+    "typ": "POJEDYNCZE_ZAMOWIENIE",
+    "product": "BULKA",
+    "liczba": 1,
+    "grupaProduktów": null,
+    "cena": null
+  },
+  {
+    "id": 1000,
+    "typ": "ZAMKNIJ_SKLEP",
+    "product": null,
+    "liczba": null,
+    "grupaProduktów": null,
+    "cena": null
+  }
+]
