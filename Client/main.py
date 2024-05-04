@@ -1,13 +1,15 @@
 import json
 import multiprocessing
+import threading
 from time import sleep
 from typing import List, Optional
-from queue import Empty
+from queue import Queue, Empty
 import typing
 from fastapi import FastAPI
 from pydantic import BaseModel
 import requests
 import logging
+from warehouse_model import Warehouse
 
 
 ##########################
@@ -60,19 +62,19 @@ CLIENT_PORT = 8889
 INDEKS = 448700
 
 response_queue = multiprocessing.Queue()
-manager = multiprocessing.Manager()
-
-promo_co_10_wycen = multiprocessing.Value('i', 0)
-
-products = manager.dict({
-    key: manager.dict({"price": 5, "quantity": 100})
-    for key in ["BULKA", "CHLEB", "SER", "MASLO", "MIESO", "SOK", "MAKA", "JAJKA"]
-})
 
 
 ## Funkcja do przetwarzania danych, otrzymuje na wejściu kolejkę akcji do wykonania
-def function(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue, products, promo_co_10_wycen):
+def function(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue):
     lock = multiprocessing.Lock()
+    manager = multiprocessing.Manager()
+
+    promo_co_10_wycen = multiprocessing.Value('i', 0)
+
+    products = manager.dict({
+        key: manager.dict({"price": 5, "quantity": 100})
+        for key in ["BULKA", "CHLEB", "SER", "MASLO", "MIESO", "SOK", "MAKA", "JAJKA"]
+    })
 
     n_workers = 4
 
@@ -222,7 +224,7 @@ async def create_sensor_data(actions: List[Actions]):
 
     logging.info('Processing')
 
-    process_worker = multiprocessing.Process(target=function, args=(queue, response_queue, products, promo_co_10_wycen))
+    process_worker = multiprocessing.Process(target=function, args=(queue, response_queue))
     process_worker.start()
     process_worker.join()
 
