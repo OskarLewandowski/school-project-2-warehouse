@@ -67,10 +67,18 @@ response_queue = multiprocessing.Queue()
 ## Funkcja do przetwarzania danych, otrzymuje na wejściu kolejkę akcji do wykonania
 def function(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue):
     lock = multiprocessing.Lock()
+    manager = multiprocessing.Manager()
+
+    promo_co_10_wycen = multiprocessing.Value('i', 0)
+
+    products = manager.dict({
+        key: manager.dict({"price": 5, "quantity": 100})
+        for key in ["BULKA", "CHLEB", "SER", "MASLO", "MIESO", "SOK", "MAKA", "JAJKA"]
+    })
 
     n_workers = 4
 
-    workers = [multiprocessing.Process(target=process, args=(queue, response_queue, lock))
+    workers = [multiprocessing.Process(target=process, args=(queue, response_queue, products, promo_co_10_wycen, lock))
                for _ in range(n_workers)]
 
     for worker in workers:
@@ -99,7 +107,8 @@ def function(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue
 
 ## Metoda dla wątków do procesowania. Tylko przykład, można tworzyć różne metody dla różnych wątków, wszystkie opcje są
 ## dozwolone
-def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue, lock: multiprocessing.Lock):
+def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue, lock: multiprocessing.Lock, products,
+            promo_co_10_wycen):
     while True:
         try:
             data = queue.get(timeout=0.7)
@@ -110,9 +119,16 @@ def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue,
                 answer.typ = data.typ
                 answer.product = data.product
                 answer.studentId = INDEKS
+
                 with lock:
-                    result = Warehouse.PODAJ_CENE(data.product)
-                    answer.cena = result
+                    promo_co_10_wycen.value += 1
+
+                    if promo_co_10_wycen.value == 10:
+                        promo_co_10_wycen.value = 0
+                        answer.cena = 0
+                    else:
+                        answer.cena = 5
+
                     print(answer)
                     response_queue.put(answer)
 
@@ -124,8 +140,12 @@ def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue,
                 answer.liczba = 1
                 answer.studentId = INDEKS
                 with lock:
-                    result = Warehouse.POJEDYNCZE_ZAMOWIENIE(data.product)
-                    answer.zrealizowaneZamowienie = result
+                    if products[data.product]['quantity'] >= 1:
+                        products[data.product]['quantity'] -= 1
+                        answer.zebraneZaopatrzenie = True
+                    else:
+                        answer.zebraneZaopatrzenie = False
+
                     print(answer)
                     response_queue.put(answer)
 
@@ -137,10 +157,15 @@ def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue,
                 answer.liczba = 1
                 answer.studentId = INDEKS
                 with lock:
-                    result = Warehouse.POJEDYNCZE_ZAOPATRZENIE(data.product)
-                    answer.zebraneZaopatrzenie = result
+                    if products[data.product]['quantity'] >= 0:
+                        products[data.product]['quantity'] += 1
+                        answer.zebraneZaopatrzenie = True
+                    else:
+                        answer.zebraneZaopatrzenie = False
+
                     print(answer)
                     response_queue.put(answer)
+
             elif data.typ == "WYCOFANIE":
                 answer = Replies()
                 answer.id = data.id
@@ -148,10 +173,12 @@ def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue,
                 answer.product = data.product
                 answer.studentId = INDEKS
                 with lock:
-                    result = Warehouse.WYCOFANIE(data.product)
-                    answer.zrealizowaneWycofanie = result
+                    products[data.product]['quantity'] = -9999999
+                    answer.zrealizowaneWycofanie = True
+
                     print(answer)
                     response_queue.put(answer)
+
             elif data.typ == "PRZYWROCENIE":
                 answer = Replies()
                 answer.id = data.id
@@ -159,10 +186,12 @@ def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue,
                 answer.product = data.product
                 answer.studentId = INDEKS
                 with lock:
-                    result = Warehouse.PRZYWROCENIE(data.product)
-                    answer.zrealizowanePrzywrócenie = result
+                    products[data.product]['quantity'] = 0
+                    answer.zrealizowanePrzywrócenie = True
+
                     print(answer)
                     response_queue.put(answer)
+
             elif data.typ == "ZAMKNIJ_SKLEP":
                 answer = Replies()
                 answer.id = data.id
@@ -170,9 +199,11 @@ def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue,
                 answer.product = data.product
                 answer.studentId = INDEKS
                 with lock:
-                    resultInventory, resultPrices = Warehouse.ZAMKNIJ_SKLEP()
-                    answer.stanMagazynów = resultInventory
-                    answer.grupaProduktów = resultPrices
+                    inventory = {product: details['quantity'] for product, details in products.items()}
+                    prices = {product: details['price'] for product, details in products.items()}
+                    answer.stanMagazynów = inventory
+                    answer.grupaProduktów = prices
+
                     print(answer)
                     response_queue.put(answer)
 
