@@ -1,20 +1,20 @@
 import json
 import multiprocessing
-import threading
 from time import sleep
 from typing import List, Optional
-from queue import Queue, Empty
+from queue import Empty
 import typing
 from fastapi import FastAPI
 from pydantic import BaseModel
 import requests
 import logging
-from warehouse_model import Warehouse
-
 
 ##########################
 ##    Model danych
 ##########################
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
 
 class Actions(BaseModel):
     id: Optional[int] = None
@@ -49,6 +49,18 @@ class Handshake(BaseModel):
     indeks: int
 
 
+global Product
+Product = {
+    'BULKA': 0,
+    'CHLEB': 1,
+    'SER': 2,
+    'MASLO': 3,
+    'MIESO': 4,
+    'SOK': 5,
+    'MAKA': 6,
+    'JAJKA': 7
+}
+
 ## Uruchomienie clienta
 app = FastAPI()
 
@@ -67,19 +79,16 @@ response_queue = multiprocessing.Queue()
 ## Funkcja do przetwarzania danych, otrzymuje na wejściu kolejkę akcji do wykonania
 def function(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue):
     lock = multiprocessing.Lock()
-    manager = multiprocessing.Manager()
 
     promo_co_10_wycen = multiprocessing.Value('i', 0)
-
-    products = manager.dict({
-        key: manager.dict({"price": 5, "quantity": 100})
-        for key in ["BULKA", "CHLEB", "SER", "MASLO", "MIESO", "SOK", "MAKA", "JAJKA"]
-    })
+    price = multiprocessing.Array('i', [5] * 8)
+    quantity = multiprocessing.Array('i', [100] * 8)
 
     n_workers = 4
 
-    workers = [multiprocessing.Process(target=process, args=(queue, response_queue, products, promo_co_10_wycen, lock))
-               for _ in range(n_workers)]
+    workers = [
+        multiprocessing.Process(target=process, args=(queue, response_queue, price, quantity, promo_co_10_wycen, lock))
+        for _ in range(n_workers)]
 
     for worker in workers:
         worker.start()
@@ -107,8 +116,8 @@ def function(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue
 
 ## Metoda dla wątków do procesowania. Tylko przykład, można tworzyć różne metody dla różnych wątków, wszystkie opcje są
 ## dozwolone
-def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue, lock: multiprocessing.Lock, products,
-            promo_co_10_wycen):
+def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue, lock: multiprocessing.Lock,
+            price: multiprocessing.Array, quantity: multiprocessing.Array, promo_co_10_wycen: multiprocessing.Value):
     while True:
         try:
             data = queue.get(timeout=0.7)
@@ -139,9 +148,9 @@ def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue,
                 answer.product = data.product
                 answer.liczba = 1
                 answer.studentId = INDEKS
-                with lock:
-                    if products[data.product]['quantity'] >= 1:
-                        products[data.product]['quantity'] -= 1
+                with (lock):
+                    if quantity[Product.get(data.product)] >= 1:
+                        quantity[Product.get(data.product)] -= 1
                         answer.zebraneZaopatrzenie = True
                     else:
                         answer.zebraneZaopatrzenie = False
@@ -157,8 +166,8 @@ def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue,
                 answer.liczba = 1
                 answer.studentId = INDEKS
                 with lock:
-                    if products[data.product]['quantity'] >= 0:
-                        products[data.product]['quantity'] += 1
+                    if quantity[Product.get(data.product)] >= 0:
+                        quantity[Product.get(data.product)] += 1
                         answer.zebraneZaopatrzenie = True
                     else:
                         answer.zebraneZaopatrzenie = False
@@ -173,7 +182,7 @@ def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue,
                 answer.product = data.product
                 answer.studentId = INDEKS
                 with lock:
-                    products[data.product]['quantity'] = -9999999
+                    quantity[Product.get(data.product)] = -9999999
                     answer.zrealizowaneWycofanie = True
 
                     print(answer)
@@ -186,7 +195,7 @@ def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue,
                 answer.product = data.product
                 answer.studentId = INDEKS
                 with lock:
-                    products[data.product]['quantity'] = 0
+                    quantity[Product.get(data.product)] = 0
                     answer.zrealizowanePrzywrócenie = True
 
                     print(answer)
@@ -199,8 +208,9 @@ def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue,
                 answer.product = data.product
                 answer.studentId = INDEKS
                 with lock:
-                    inventory = {product: details['quantity'] for product, details in products.items()}
-                    prices = {product: details['price'] for product, details in products.items()}
+                    inventory = {product: quantity[Product[product]] for product in Product}
+                    prices = {product: price[Product[product]] for product in Product}
+
                     answer.stanMagazynów = inventory
                     answer.grupaProduktów = prices
 
