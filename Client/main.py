@@ -73,12 +73,13 @@ CLIENT_PORT = 8889
 
 INDEKS = 448700
 
-response_queue = multiprocessing.Queue()
-
 
 ## Funkcja do przetwarzania danych, otrzymuje na wejściu kolejkę akcji do wykonania
-def function(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue):
+def function(queue: multiprocessing.Queue):
     lock = multiprocessing.Lock()
+
+    manager = multiprocessing.Manager()
+    response_queue = manager.list()
 
     promo_co_10_wycen = multiprocessing.Value('i', 0)
     price = multiprocessing.Array('i', [5] * 8)
@@ -95,14 +96,14 @@ def function(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue
     for worker in workers:
         worker.join()
 
-    # Przykład odpowiedzi dla pojedynczej akcji
     # Lista odpowiedzi
     wynik = []
 
-    while not response_queue.empty():
-        wynik.append(response_queue.get())
+    for item in response_queue:
+        wynik.append(item)
 
-    print(len(wynik))
+    print(wynik)
+    print(f"Wyniki: {len(wynik)} | Kolejka: {len(response_queue)}")
 
     # Odesłanie listy wyników do serwera
     url = f"http://{SERVER_IP}:{SERVER_PORT}/action/replies"
@@ -116,8 +117,7 @@ def function(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue
 
 ## Metoda dla wątków do procesowania. Tylko przykład, można tworzyć różne metody dla różnych wątków, wszystkie opcje są
 ## dozwolone
-def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue, lock: multiprocessing.Lock,
-            price: multiprocessing.Array, quantity: multiprocessing.Array, promo_co_10_wycen: multiprocessing.Value):
+def process(queue, response_queue, price, quantity, promo_co_10_wycen, lock):
     while True:
         try:
             data = queue.get(timeout=0.7)
@@ -139,7 +139,7 @@ def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue,
                         answer.cena = 5
 
                     print(answer)
-                    response_queue.put(answer)
+                    response_queue.append(answer)
 
             elif data.typ == "POJEDYNCZE_ZAMOWIENIE":
                 answer = Replies()
@@ -151,12 +151,12 @@ def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue,
                 with (lock):
                     if quantity[Product.get(data.product)] >= 1:
                         quantity[Product.get(data.product)] -= 1
-                        answer.zebraneZaopatrzenie = True
+                        answer.zrealizowaneZamowienie = True
                     else:
-                        answer.zebraneZaopatrzenie = False
+                        answer.zrealizowaneZamowienie = False
 
                     print(answer)
-                    response_queue.put(answer)
+                    response_queue.append(answer)
 
             elif data.typ == "POJEDYNCZE_ZAOPATRZENIE":
                 answer = Replies()
@@ -173,7 +173,7 @@ def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue,
                         answer.zebraneZaopatrzenie = False
 
                     print(answer)
-                    response_queue.put(answer)
+                    response_queue.append(answer)
 
             elif data.typ == "WYCOFANIE":
                 answer = Replies()
@@ -186,7 +186,7 @@ def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue,
                     answer.zrealizowaneWycofanie = True
 
                     print(answer)
-                    response_queue.put(answer)
+                    response_queue.append(answer)
 
             elif data.typ == "PRZYWROCENIE":
                 answer = Replies()
@@ -199,7 +199,7 @@ def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue,
                     answer.zrealizowanePrzywrócenie = True
 
                     print(answer)
-                    response_queue.put(answer)
+                    response_queue.append(answer)
 
             elif data.typ == "ZAMKNIJ_SKLEP":
                 answer = Replies()
@@ -215,7 +215,7 @@ def process(queue: multiprocessing.Queue, response_queue: multiprocessing.Queue,
                     answer.grupaProduktów = prices
 
                     print(answer)
-                    response_queue.put(answer)
+                    response_queue.append(answer)
 
         except Empty:
             print("Kolejka jest pusta, kończenie pracy procesu...")
@@ -234,7 +234,7 @@ async def create_sensor_data(actions: List[Actions]):
 
     logging.info('Processing')
 
-    process_worker = multiprocessing.Process(target=function, args=(queue, response_queue))
+    process_worker = multiprocessing.Process(target=function, args=(queue,))
     process_worker.start()
     process_worker.join()
 
