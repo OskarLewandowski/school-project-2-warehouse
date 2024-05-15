@@ -133,7 +133,7 @@ def process(queue, response_queue, price, quantity, promo_co_10_wycen, lock):
 
                     if promo_co_10_wycen.value == 10:
                         promo_co_10_wycen.value = 0
-                        answer.cena = 5  # Change to 0 if test be fixed
+                        answer.cena = 0  # Value PROPMO_CO_10_WYCEN
                     else:
                         answer.cena = 5
 
