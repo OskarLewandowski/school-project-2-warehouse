@@ -4,4 +4,4 @@ ustawienia:
   zamowienia: "POJEDYNCZE"
   zaopatrzenie: "POJEDYNCZE"
   wydarzenia: "WYCOFANIE"
-  liczbaZadan: 5000
+  liczbaZadan: 100000
