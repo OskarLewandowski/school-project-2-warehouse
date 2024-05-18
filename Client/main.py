@@ -1,5 +1,6 @@
 import json
 import multiprocessing
+import time
 from time import sleep
 from typing import List, Optional
 from queue import Empty
@@ -83,16 +84,18 @@ INDEKS = 448700
 ## Funkcja do przetwarzania danych, otrzymuje na wejściu kolejkę akcji do wykonania
 def function(queue: multiprocessing.Queue):
     lock = multiprocessing.Lock()
-
+    barrier = multiprocessing.Barrier(n_workers, timeout=0.7)
     manager = multiprocessing.Manager()
     response_queue = manager.list()
 
     promo_co_10_wycen = multiprocessing.Value('i', 0)
     price = multiprocessing.Array('i', [5] * 8)
     quantity = multiprocessing.Array('i', [100] * 8)
+    id_queue_list = manager.list()
 
     workers = [
-        multiprocessing.Process(target=process, args=(queue, response_queue, price, quantity, promo_co_10_wycen, lock))
+        multiprocessing.Process(target=process, args=(
+        queue, response_queue, price, quantity, promo_co_10_wycen, lock, barrier, id_queue_list))
         for _ in range(n_workers)]
 
     for worker in workers:
@@ -120,12 +123,29 @@ def function(queue: multiprocessing.Queue):
 
 ## Metoda dla wątków do procesowania. Tylko przykład, można tworzyć różne metody dla różnych wątków, wszystkie opcje są
 ## dozwolone
-def process(queue, response_queue, price, quantity, promo_co_10_wycen, lock):
+def process(queue, response_queue, price, quantity, promo_co_10_wycen, lock, barrier, id_queue_list):
     while True:
         try:
             data = queue.get(timeout=0.7)
 
             if data.typ in MyActions:
+
+                try:
+                    with lock:
+                        id_queue_list.append(data.id)
+
+                    barrier.wait()
+                    print(id_queue_list)
+                except:
+                    barrier.abort()
+
+                while True:
+                    with lock:
+                        if data.id == min(id_queue_list):
+                            id_queue_list.remove(data.id)
+                            break
+                    time.sleep(0.00007)
+
                 if data.typ == "PODAJ_CENE":
                     answer = Replies()
                     answer.id = data.id
