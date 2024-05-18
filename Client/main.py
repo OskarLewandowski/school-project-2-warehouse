@@ -1,5 +1,6 @@
 import json
 import multiprocessing
+import os
 import time
 from time import sleep
 from typing import List, Optional
@@ -62,7 +63,7 @@ Product = {
     'JAJKA': 7
 }
 global n_workers
-n_workers = 4
+n_workers = os.cpu_count()
 
 global MyActions
 MyActions = ["PODAJ_CENE", "POJEDYNCZE_ZAMOWIENIE", "POJEDYNCZE_ZAOPATRZENIE", "WYCOFANIE", "PRZYWROCENIE",
@@ -95,7 +96,7 @@ def function(queue: multiprocessing.Queue):
 
     workers = [
         multiprocessing.Process(target=process, args=(
-        queue, response_queue, price, quantity, promo_co_10_wycen, lock, barrier, id_queue_list))
+            queue, response_queue, price, quantity, promo_co_10_wycen, lock, barrier, id_queue_list))
         for _ in range(n_workers)]
 
     for worker in workers:
@@ -126,7 +127,7 @@ def function(queue: multiprocessing.Queue):
 def process(queue, response_queue, price, quantity, promo_co_10_wycen, lock, barrier, id_queue_list):
     while True:
         try:
-            data = queue.get(timeout=0.7)
+            data = queue.get(timeout=0.007)
 
             if data.typ in MyActions:
 
@@ -144,7 +145,7 @@ def process(queue, response_queue, price, quantity, promo_co_10_wycen, lock, bar
                         if data.id == min(id_queue_list):
                             id_queue_list.remove(data.id)
                             break
-                    time.sleep(0.00007)
+                    time.sleep(0.001)
 
                 if data.typ == "PODAJ_CENE":
                     answer = Replies()
@@ -158,7 +159,7 @@ def process(queue, response_queue, price, quantity, promo_co_10_wycen, lock, bar
 
                         if promo_co_10_wycen.value == 10:
                             promo_co_10_wycen.value = 0
-                            answer.cena = 0  # Value PROPMO_CO_10_WYCEN
+                            answer.cena = 0  # Value PROMO_CO_10_WYCEN
                         else:
                             answer.cena = 5
 
@@ -251,6 +252,8 @@ def process(queue, response_queue, price, quantity, promo_co_10_wycen, lock, bar
 ## Odbiera listę operacji od serwera
 @app.post("/push-data", status_code=201)
 async def create_sensor_data(actions: List[Actions]):
+    print("n_workers:", n_workers)
+
     queue = multiprocessing.Queue()
 
     for action in actions:
