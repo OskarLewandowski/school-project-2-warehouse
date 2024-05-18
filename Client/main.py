@@ -63,7 +63,7 @@ Product = {
     'JAJKA': 7
 }
 global n_workers
-n_workers = os.cpu_count()
+n_workers = 4
 
 global MyActions
 MyActions = ["PODAJ_CENE", "POJEDYNCZE_ZAMOWIENIE", "POJEDYNCZE_ZAOPATRZENIE", "WYCOFANIE", "PRZYWROCENIE",
@@ -136,7 +136,6 @@ def process(queue, response_queue, price, quantity, promo_co_10_wycen, lock, bar
                         id_queue_list.append(data.id)
 
                     barrier.wait()
-                    print(id_queue_list)
                 except:
                     barrier.abort()
 
@@ -147,6 +146,7 @@ def process(queue, response_queue, price, quantity, promo_co_10_wycen, lock, bar
                             break
                     time.sleep(0.001)
 
+                print(id_queue_list)
                 if data.typ == "PODAJ_CENE":
                     answer = Replies()
                     answer.id = data.id
