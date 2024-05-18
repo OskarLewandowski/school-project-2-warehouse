@@ -60,6 +60,12 @@ Product = {
     'MAKA': 6,
     'JAJKA': 7
 }
+global n_workers
+n_workers = 4
+
+global MyActions
+MyActions = ["PODAJ_CENE", "POJEDYNCZE_ZAMOWIENIE", "POJEDYNCZE_ZAOPATRZENIE", "WYCOFANIE", "PRZYWROCENIE",
+             "ZAMKNIJ_SKLEP"]
 
 ## Uruchomienie clienta
 app = FastAPI()
@@ -84,8 +90,6 @@ def function(queue: multiprocessing.Queue):
     promo_co_10_wycen = multiprocessing.Value('i', 0)
     price = multiprocessing.Array('i', [5] * 8)
     quantity = multiprocessing.Array('i', [100] * 8)
-
-    n_workers = 4
 
     workers = [
         multiprocessing.Process(target=process, args=(queue, response_queue, price, quantity, promo_co_10_wycen, lock))
@@ -121,100 +125,101 @@ def process(queue, response_queue, price, quantity, promo_co_10_wycen, lock):
         try:
             data = queue.get(timeout=0.7)
 
-            if data.typ == "PODAJ_CENE":
-                answer = Replies()
-                answer.id = data.id
-                answer.typ = data.typ
-                answer.product = data.product
-                answer.studentId = INDEKS
+            if data.typ in MyActions:
+                if data.typ == "PODAJ_CENE":
+                    answer = Replies()
+                    answer.id = data.id
+                    answer.typ = data.typ
+                    answer.product = data.product
+                    answer.studentId = INDEKS
 
-                with lock:
-                    promo_co_10_wycen.value += 1
+                    with lock:
+                        promo_co_10_wycen.value += 1
 
-                    if promo_co_10_wycen.value == 10:
-                        promo_co_10_wycen.value = 0
-                        answer.cena = 0  # Value PROPMO_CO_10_WYCEN
-                    else:
-                        answer.cena = 5
+                        if promo_co_10_wycen.value == 10:
+                            promo_co_10_wycen.value = 0
+                            answer.cena = 0  # Value PROPMO_CO_10_WYCEN
+                        else:
+                            answer.cena = 5
 
-                    print(answer)
-                    response_queue.append(answer)
+                        print(answer)
+                        response_queue.append(answer)
 
-            elif data.typ == "POJEDYNCZE_ZAMOWIENIE":
-                answer = Replies()
-                answer.id = data.id
-                answer.typ = data.typ
-                answer.product = data.product
-                answer.liczba = 1
-                answer.studentId = INDEKS
-                with (lock):
-                    if quantity[Product.get(data.product)] >= 1:
-                        quantity[Product.get(data.product)] -= 1
-                        answer.zrealizowaneZamowienie = True
-                    else:
-                        answer.zrealizowaneZamowienie = False
+                elif data.typ == "POJEDYNCZE_ZAMOWIENIE":
+                    answer = Replies()
+                    answer.id = data.id
+                    answer.typ = data.typ
+                    answer.product = data.product
+                    answer.liczba = 1
+                    answer.studentId = INDEKS
+                    with (lock):
+                        if quantity[Product.get(data.product)] >= 1:
+                            quantity[Product.get(data.product)] -= 1
+                            answer.zrealizowaneZamowienie = True
+                        else:
+                            answer.zrealizowaneZamowienie = False
 
-                    print(answer)
-                    response_queue.append(answer)
+                        print(answer)
+                        response_queue.append(answer)
 
-            elif data.typ == "POJEDYNCZE_ZAOPATRZENIE":
-                answer = Replies()
-                answer.id = data.id
-                answer.typ = data.typ
-                answer.product = data.product
-                answer.liczba = 1
-                answer.studentId = INDEKS
-                with lock:
-                    if quantity[Product.get(data.product)] >= 0:
-                        quantity[Product.get(data.product)] += 1
-                        answer.zebraneZaopatrzenie = True
-                    else:
-                        answer.zebraneZaopatrzenie = False
+                elif data.typ == "POJEDYNCZE_ZAOPATRZENIE":
+                    answer = Replies()
+                    answer.id = data.id
+                    answer.typ = data.typ
+                    answer.product = data.product
+                    answer.liczba = 1
+                    answer.studentId = INDEKS
+                    with lock:
+                        if quantity[Product.get(data.product)] >= 0:
+                            quantity[Product.get(data.product)] += 1
+                            answer.zebraneZaopatrzenie = True
+                        else:
+                            answer.zebraneZaopatrzenie = False
 
-                    print(answer)
-                    response_queue.append(answer)
+                        print(answer)
+                        response_queue.append(answer)
 
-            elif data.typ == "WYCOFANIE":
-                answer = Replies()
-                answer.id = data.id
-                answer.typ = data.typ
-                answer.product = data.product
-                answer.studentId = INDEKS
-                with lock:
-                    quantity[Product.get(data.product)] = -9999999
-                    answer.zrealizowaneWycofanie = True
+                elif data.typ == "WYCOFANIE":
+                    answer = Replies()
+                    answer.id = data.id
+                    answer.typ = data.typ
+                    answer.product = data.product
+                    answer.studentId = INDEKS
+                    with lock:
+                        quantity[Product.get(data.product)] = -9999999
+                        answer.zrealizowaneWycofanie = True
 
-                    print(answer)
-                    response_queue.append(answer)
+                        print(answer)
+                        response_queue.append(answer)
 
-            elif data.typ == "PRZYWROCENIE":
-                answer = Replies()
-                answer.id = data.id
-                answer.typ = data.typ
-                answer.product = data.product
-                answer.studentId = INDEKS
-                with lock:
-                    quantity[Product.get(data.product)] = 0
-                    answer.zrealizowanePrzywrócenie = True
+                elif data.typ == "PRZYWROCENIE":
+                    answer = Replies()
+                    answer.id = data.id
+                    answer.typ = data.typ
+                    answer.product = data.product
+                    answer.studentId = INDEKS
+                    with lock:
+                        quantity[Product.get(data.product)] = 0
+                        answer.zrealizowanePrzywrócenie = True
 
-                    print(answer)
-                    response_queue.append(answer)
+                        print(answer)
+                        response_queue.append(answer)
 
-            elif data.typ == "ZAMKNIJ_SKLEP":
-                answer = Replies()
-                answer.id = data.id
-                answer.typ = data.typ
-                answer.product = data.product
-                answer.studentId = INDEKS
-                with lock:
-                    inventory = {product: quantity[Product[product]] for product in Product}
-                    prices = {product: price[Product[product]] for product in Product}
+                elif data.typ == "ZAMKNIJ_SKLEP":
+                    answer = Replies()
+                    answer.id = data.id
+                    answer.typ = data.typ
+                    answer.product = data.product
+                    answer.studentId = INDEKS
+                    with lock:
+                        inventory = {product: quantity[Product[product]] for product in Product}
+                        prices = {product: price[Product[product]] for product in Product}
 
-                    answer.stanMagazynów = inventory
-                    answer.grupaProduktów = prices
+                        answer.stanMagazynów = inventory
+                        answer.grupaProduktów = prices
 
-                    print(answer)
-                    response_queue.append(answer)
+                        print(answer)
+                        response_queue.append(answer)
 
         except Empty:
             print("Kolejka jest pusta, kończenie pracy procesu...")
