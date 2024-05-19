@@ -85,7 +85,7 @@ INDEKS = 448700
 ## Funkcja do przetwarzania danych, otrzymuje na wejściu kolejkę akcji do wykonania
 def function(queue: multiprocessing.Queue):
     lock = multiprocessing.Lock()
-    barrier = multiprocessing.Barrier(n_workers, timeout=0.7)
+    barrier = multiprocessing.Barrier(n_workers, timeout=2)
     manager = multiprocessing.Manager()
     response_queue = manager.list()
 
@@ -104,17 +104,12 @@ def function(queue: multiprocessing.Queue):
     for worker in workers:
         worker.join()
 
-    # Lista odpowiedzi
-    wynik = []
-
-    for item in response_queue:
-        wynik.append(item)
-
-    print(f"Wynik: {len(wynik)} | Kolejka: {len(response_queue)}")
+    print("\nIlość procesów:", n_workers)
+    print(f"Wynik: {len(response_queue)}")
 
     # Odesłanie listy wyników do serwera
     url = f"http://{SERVER_IP}:{SERVER_PORT}/action/replies"
-    data = json.dumps([obj.__dict__ for obj in wynik])
+    data = json.dumps([obj.__dict__ for obj in response_queue])
     headers = {'Content-type': 'application/json'}
     sleep(1)
     r = requests.post(url, data=data, headers=headers)
@@ -144,9 +139,8 @@ def process(queue, response_queue, price, quantity, promo_co_10_wycen, lock, bar
                         if data.id == min(id_queue_list):
                             id_queue_list.remove(data.id)
                             break
-                    time.sleep(0.001)
+                    time.sleep(0.00777)
 
-                print(id_queue_list)
                 if data.typ == "PODAJ_CENE":
                     answer = Replies()
                     answer.id = data.id
@@ -163,6 +157,7 @@ def process(queue, response_queue, price, quantity, promo_co_10_wycen, lock, bar
                         else:
                             answer.cena = 5
 
+                        print(id_queue_list)
                         print(answer)
                         response_queue.append(answer)
 
@@ -180,6 +175,7 @@ def process(queue, response_queue, price, quantity, promo_co_10_wycen, lock, bar
                         else:
                             answer.zrealizowaneZamowienie = False
 
+                        print(id_queue_list)
                         print(answer)
                         response_queue.append(answer)
 
@@ -197,6 +193,7 @@ def process(queue, response_queue, price, quantity, promo_co_10_wycen, lock, bar
                         else:
                             answer.zebraneZaopatrzenie = False
 
+                        print(id_queue_list)
                         print(answer)
                         response_queue.append(answer)
 
@@ -210,6 +207,7 @@ def process(queue, response_queue, price, quantity, promo_co_10_wycen, lock, bar
                         quantity[Product.get(data.product)] = -9999999
                         answer.zrealizowaneWycofanie = True
 
+                        print(id_queue_list)
                         print(answer)
                         response_queue.append(answer)
 
@@ -223,6 +221,7 @@ def process(queue, response_queue, price, quantity, promo_co_10_wycen, lock, bar
                         quantity[Product.get(data.product)] = 0
                         answer.zrealizowanePrzywrócenie = True
 
+                        print(id_queue_list)
                         print(answer)
                         response_queue.append(answer)
 
@@ -239,6 +238,7 @@ def process(queue, response_queue, price, quantity, promo_co_10_wycen, lock, bar
                         answer.stanMagazynów = inventory
                         answer.grupaProduktów = prices
 
+                        print(id_queue_list)
                         print(answer)
                         response_queue.append(answer)
 
@@ -252,8 +252,6 @@ def process(queue, response_queue, price, quantity, promo_co_10_wycen, lock, bar
 ## Odbiera listę operacji od serwera
 @app.post("/push-data", status_code=201)
 async def create_sensor_data(actions: List[Actions]):
-    print("n_workers:", n_workers)
-
     queue = multiprocessing.Queue()
 
     for action in actions:
