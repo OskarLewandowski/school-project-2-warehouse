@@ -1,6 +1,5 @@
 import json
 import multiprocessing
-import os
 import time
 from time import sleep
 from typing import List, Optional
@@ -10,6 +9,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import requests
 import logging
+from datetime import datetime
 
 ##########################
 ##    Model danych
@@ -83,7 +83,7 @@ INDEKS = 448700
 
 
 ## Funkcja do przetwarzania danych, otrzymuje na wejściu kolejkę akcji do wykonania
-def function(queue: multiprocessing.Queue):
+def function(queue: multiprocessing.Queue, start_time):
     lock = multiprocessing.Lock()
     barrier = multiprocessing.Barrier(n_workers, timeout=2)
     manager = multiprocessing.Manager()
@@ -104,8 +104,11 @@ def function(queue: multiprocessing.Queue):
     for worker in workers:
         worker.join()
 
+    end_time = datetime.now()
+    time = end_time - start_time
+
     print("\nIlość procesów:", n_workers)
-    print(f"Wynik: {len(response_queue)}")
+    print(f"Wynik: {len(response_queue)} | Czas: {time}")
 
     # Odesłanie listy wyników do serwera
     url = f"http://{SERVER_IP}:{SERVER_PORT}/action/replies"
@@ -252,6 +255,8 @@ def process(queue, response_queue, price, quantity, promo_co_10_wycen, lock, bar
 ## Odbiera listę operacji od serwera
 @app.post("/push-data", status_code=201)
 async def create_sensor_data(actions: List[Actions]):
+    start_time = datetime.now()
+
     queue = multiprocessing.Queue()
 
     for action in actions:
@@ -259,7 +264,7 @@ async def create_sensor_data(actions: List[Actions]):
 
     logging.info('Processing')
 
-    process_worker = multiprocessing.Process(target=function, args=(queue,))
+    process_worker = multiprocessing.Process(target=function, args=(queue, start_time))
     process_worker.start()
     process_worker.join()
 
